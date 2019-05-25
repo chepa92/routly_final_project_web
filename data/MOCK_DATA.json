@@ -1,5 +1,5 @@
 [{
-    "StationId": 8,
+    "StationId": 1,
     "StationName": "Dizengoff 16",
     "District": "Tel Aviv",
     "City": "Tel Aviv",
@@ -15,7 +15,7 @@
     }
   },
   {
-    "StationId": 15,
+    "StationId": 2,
     "StationName": "Derech Hailanot 28",
     "District": "Jerusalem",
     "City": "Jerusalem",
@@ -31,7 +31,7 @@
     }
   },
   {
-    "StationId": 7,
+    "StationId": 3,
     "StationName": "Sderot HaArba'a 18",
     "District": "Northern",
     "City": "Bet She'an",
@@ -47,7 +47,7 @@
     }
   },
   {
-    "StationId": 10,
+    "StationId": 4,
     "StationName": "Yotam  49",
     "District": "Haifa",
     "City": "Haifa",
@@ -63,7 +63,7 @@
     }
   },
   {
-    "StationId": 20,
+    "StationId": 5,
     "StationName": "Abba Hillel Silver Rd 17",
     "District": "Central",
     "City": "Ramat Gan",
@@ -79,7 +79,7 @@
     }
   },
   {
-    "StationId": 22,
+    "StationId": 6,
     "StationName": "Ar Shlomo 6",
     "District": "Southern",
     "City": "Eilat",
@@ -95,7 +95,7 @@
     }
   },
   {
-    "StationId": 23,
+    "StationId": 7,
     "StationName": "Sderot Ye'elim 65",
     "District": "Southern",
     "City": "Be'er Sheva",
@@ -111,7 +111,7 @@
     }
   },
   {
-    "StationId": 24,
+    "StationId": 8,
     "StationName": " Shimshon 96",
     "District": "Haifa",
     "City": "Haifa",
