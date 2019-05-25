@@ -6,7 +6,7 @@
     "Street": "Dizengoff",
     "Latitude": "32.2865132",
     "Longitude": "34.8549239",
-    "Comment": "Comment",
+    "Comment": "Hello World Station",
     "Smart": {
       "Wifi": true,
       "SmartScreen": true,
@@ -22,7 +22,7 @@
     "Street": "Derech Hailanot",
     "Latitude": "32.2865132",
     "Longitude": "34.8549239",
-    "Comment": "Comment",
+    "Comment": "Test Station",
     "Smart": {
       "Wifi": true,
       "SmartScreen": true,
@@ -54,7 +54,7 @@
     "Street": "Yotam",
     "Latitude": "32.2865132",
     "Longitude": "34.8549239",
-    "Comment": "Comment",
+    "Comment": "beta station",
     "Smart": {
       "Wifi": true,
       "SmartScreen": true,
@@ -65,12 +65,12 @@
   {
     "StationId": 5,
     "StationName": "Abba Hillel Silver Rd 17",
-    "District": "Central",
+    "District": "Tel Aviv",
     "City": "Ramat Gan",
     "Street": "Abba Hillel Silver",
     "Latitude": "32.2865132",
     "Longitude": "34.8549239",
-    "Comment": "Comment",
+    "Comment": "Rom station",
     "Smart": {
       "Wifi": true,
       "SmartScreen": true,
@@ -86,7 +86,7 @@
     "Street": "Ar Shlomo",
     "Latitude": "32.2865132",
     "Longitude": "34.8549239",
-    "Comment": "Comment",
+    "Comment": "Yonit Station",
     "Smart": {
       "Wifi": true,
       "SmartScreen": true,
@@ -102,7 +102,7 @@
     "Street": "Sderot Ye'elim",
     "Latitude": "32.2865132",
     "Longitude": "34.8549239",
-    "Comment": "Comment",
+    "Comment": "No roof station",
     "Smart": {
       "Wifi": true,
       "SmartScreen": true,
@@ -112,13 +112,45 @@
   },
   {
     "StationId": 8,
-    "StationName": " Shimshon 96",
+    "StationName": "Shimshon 96",
     "District": "Haifa",
     "City": "Haifa",
     "Street": "Shimshon",
     "Latitude": "32.2865132",
     "Longitude": "34.8549239",
-    "Comment": "Comment",
+    "Comment": "Nice Station",
+    "Smart": {
+      "Wifi": true,
+      "SmartScreen": true,
+      "Conditioner": true,
+      "Light": true
+    }
+  },
+  {
+    "StationId": 9,
+    "StationName": "Shenkar",
+    "District": "Tel Aviv",
+    "City": "Ramat Gan",
+    "Street": "Anna Frank 15",
+    "Latitude": "32.2865132",
+    "Longitude": "34.8549239",
+    "Comment": "Yonit Station",
+    "Smart": {
+      "Wifi": true,
+      "SmartScreen": true,
+      "Conditioner": true,
+      "Light": true
+    }
+  },
+  {
+    "StationId": 10,
+    "StationName": "Herzel/Arlozorov",
+    "District": "Tel Aviv",
+    "City": "Tel Aviv",
+    "Street": "Herzel/Arlozorov",
+    "Latitude": "32.2865132",
+    "Longitude": "34.8549239",
+    "Comment": "Bad Station",
     "Smart": {
       "Wifi": true,
       "SmartScreen": true,
