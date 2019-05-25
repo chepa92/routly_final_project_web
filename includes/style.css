@@ -8,8 +8,31 @@ section {
     display: block
 }
 
+*{font-family: 'ABeeZee', sans-serif;}
 
 
+  .navbar-light .navbar-brand{
+      color: white;
+      font-weight: bold;
+  }
+
+  .navbar-light .navSelcted{
+    color: black;
+}
+
+.navbar-light{
+    background-color: #d9f3d2;
+}
+.nav-link{
+    background-color: #4cd964;
+}
+
+h1{
+    text-align: center;
+}
+*a:hover{
+    color:#a3a3a3
+}
 @media only screen and (max-width: 600px) {
     body {
         background-color: #cfd6da;

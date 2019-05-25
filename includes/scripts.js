@@ -6,35 +6,39 @@ $(document).ready(function () {
         for (var row of data) {
             var table_row = $(
                 '<tr>' +
-                '<td>' + row.id + '</td>' +
-                '<td>' + row.date + '</td>' +
-                '<td>' + row.country + '</td>' +
-                '<td>' + row.city + '</td>' +
-                '<td>' + row.temp_c + '</td>' +
-                '<td>' + row.temp_f + '</td>' +
+                '<td>' + row.StationId + '</td>' +
+                '<td>' + row.StationName + '</td>' +
+                '<td>' + row.District + '</td>' +
+                '<td>' + row.City + '</td>' +
+                '<td>' + row.Street + '</td>' +
+                '<td>' + row.Smart + '</td>' +
+                '<td>' + row.edit + '</td>' +
                 '</tr>'
             )
             var option = $(
-                '<option>' + row.country + '</option>'
+                '<option>' + row.District + '</option>'
             )
-            $('#country').append(option)
+            $('#District').append(option)
             $('tbody').append(table_row)
         }
     });
-    $('#country').on('change', function (e) {
+
+    
+    $('#District').on('change', function (e) {
         var value = e.target.value
         var match = ''
         console.log(value)
         for (var row of json_data) {
-            if (row.country == value)
+            if (row.District == value || value=="all")
                 match +=
                 '<tr>' +
-                '<td scope="row">' + row.id + '</td>' +
-                '<td>' + row.date + '</td>' +
-                '<td>' + row.country + '</td>' +
-                '<td>' + row.city + '</td>' +
-                '<td>' + row.temp_c + '</td>' +
-                '<td>' + row.temp_f + '</td>' +
+                '<td scope="row">' + row.StationId + '</td>' +
+                '<td>' + row.StationName + '</td>' +
+                '<td>' + row.District + '</td>' +
+                '<td>' + row.City + '</td>' +
+                '<td>' + row.Street + '</td>' +
+                '<td>' + row.Smart + '</td>' +
+                '<td>' + row.edit + '</td>' +
                 '</tr>'
         }
         $('tbody').html(match)
