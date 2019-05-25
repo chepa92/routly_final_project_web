@@ -1,7 +1,6 @@
 $(document).ready(function () {
     var json_data = []
     $.getJSON("data/MOCK_DATA.json", function (data) {
-        console.log(data)
         json_data = data
         for (var row of data) {
             var table_row = $(
@@ -11,8 +10,9 @@ $(document).ready(function () {
                 '<td>' + row.District + '</td>' +
                 '<td>' + row.City + '</td>' +
                 '<td>' + row.Street + '</td>' +
-                '<td>' + row.Smart + '</td>' +
-                '<td>' + row.edit + '</td>' +
+                '<td>' + row.Smart.Wifi + '</td>' +
+                '<td>' + row.Comment + '</td>' +
+                '<td>' + "✏" + '</td>' +
                 '</tr>'
             )
             var option = $(
@@ -37,8 +37,9 @@ $(document).ready(function () {
                 '<td>' + row.District + '</td>' +
                 '<td>' + row.City + '</td>' +
                 '<td>' + row.Street + '</td>' +
-                '<td>' + row.Smart + '</td>' +
-                '<td>' + row.edit + '</td>' +
+                '<td>' + row.Smart.Wifi + '</td>' +
+                '<td>' + row.Comment + '</td>' +
+                '<td>' + "✏" + '</td>' +
                 '</tr>'
         }
         $('tbody').html(match)
