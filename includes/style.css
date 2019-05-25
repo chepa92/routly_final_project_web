@@ -54,7 +54,9 @@ section {
     }
 
     tr :nth-child(4),
-    tr :nth-child(6) {
+    tr :nth-child(5),
+    tr :nth-child(6),
+    tr :nth-child(7) {
         display: none;
     }
 }
