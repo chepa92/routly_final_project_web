@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+
+
     var json_data = []
     $.getJSON("data/MOCK_DATA.json", function (data) {
         json_data = data
@@ -23,25 +26,40 @@ $(document).ready(function () {
         }
     });
 
-    
+
     $('#District').on('change', function (e) {
         var value = e.target.value
         var match = ''
         console.log(value)
         for (var row of json_data) {
-            if (row.District == value || value=="all")
+            if (row.District == value || value == "all")
                 match +=
-                '<tr>' +
-                '<td scope="row">' + row.StationId + '</td>' +
-                '<td>' + row.StationName + '</td>' +
-                '<td>' + row.District + '</td>' +
-                '<td>' + row.City + '</td>' +
-                '<td>' + row.Street + '</td>' +
-                '<td>' + row.Smart.Wifi + '</td>' +
-                '<td>' + row.Comment + '</td>' +
-                '<td>' + "✏" + '</td>' +
-                '</tr>'
+                    '<tr>' +
+                    '<td scope="row">' + row.StationId + '</td>' +
+                    '<td>' + row.StationName + '</td>' +
+                    '<td>' + row.District + '</td>' +
+                    '<td>' + row.City + '</td>' +
+                    '<td>' + row.Street + '</td>' +
+                    '<td>' + row.Smart.Wifi + '</td>' +
+                    '<td>' + row.Comment + '</td>' +
+                    '<td>' + "✏" + '</td>' +
+                    '</tr>'
         }
         $('tbody').html(match)
     })
+
+        $('#table').DataTable({
+            //  "paging": false
+            "lengthChange": false,
+            "searching": false
+        });
+
+
+    // var table = $('#table').DataTable();
+
+    // $('#table-search').on( 'keyup', function () {
+    //     table.search( this.value ).draw();
+    // } );  
+
+
 });
