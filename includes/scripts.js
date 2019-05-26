@@ -48,18 +48,13 @@ $(document).ready(function () {
         $('tbody').html(match)
     })
 
-        $('#table').DataTable({
-            //  "paging": false
+    $(document).ready(function() {
+        $('#table').DataTable( {
+            "json": "data/MOCK_DATA.json",
             "lengthChange": false,
             "searching": false
-        });
-
-
-    // var table = $('#table').DataTable();
-
-    // $('#table-search').on( 'keyup', function () {
-    //     table.search( this.value ).draw();
-    // } );  
+        } );
+    } );
 
 
 });
