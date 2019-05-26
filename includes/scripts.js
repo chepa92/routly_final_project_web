@@ -24,6 +24,11 @@ $(document).ready(function () {
             $('#District').append(option)
             $('tbody').append(table_row)
         }
+
+        $("select option").val(function(idx, val) {
+            $(this).siblings('[value="' + val + '"]').remove();
+        })
+
     });
 
 
