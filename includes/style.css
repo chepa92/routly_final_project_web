@@ -59,6 +59,26 @@ section {
     tr :nth-child(7) {
         display: none;
     }
+    .navbar-therd{
+        display: none;
+    }
+
+    .col-4 , .col-2{
+        max-width: 100% !important;
+        margin: 10px 0px;
+    }
+
+    .form-row{
+        display: block;
+    }
+
+    .form-control-smart{
+        display: none;
+    }
+    
+    .navbar-text-current{
+        color: white !important;
+    }
 }
 
 @viewport {
