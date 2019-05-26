@@ -48,13 +48,4 @@ $(document).ready(function () {
         $('tbody').html(match)
     })
 
-    $(document).ready(function() {
-        $('#table').DataTable( {
-            "json": "data/MOCK_DATA.json",
-            "lengthChange": false,
-            "searching": false
-        } );
-    } );
-
-
 });
