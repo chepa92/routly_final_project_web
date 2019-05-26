@@ -15,7 +15,7 @@ $(document).ready(function () {
                 '<td>' + row.Street + '</td>' +
                 '<td>' + row.Smart.Wifi + '</td>' +
                 '<td>' + row.Comment + '</td>' +
-                '<td>' + "✏" + '</td>' +
+                '<td>' + '<input type="submit" name="stationID" class="edit_button" value=' + row.StationId + "></input></td>" +
                 '</tr>'
             )
             var option = $(
