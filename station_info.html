@@ -9,10 +9,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-        </script>
+            </script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
+            </script>
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         <link rel="stylesheet" href="./includes/style.css">
@@ -61,10 +61,11 @@
                         <a class="nav-link" href="#"></a>
                     </li>
                     <li class="nav-item nav-link crumb disabled">
-                        <a class="nav-link active" href="index.html">Info<span class="sr-only">(current)</span></a>
+                        <a class="nav-link active" href="index.html">Add Station<span
+                                class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item nav-link disabled">
-                        <a class="nav-link" href="#"></a>
+                        <a class="nav-link" href="#">Info</a>
                     </li>
                     <li class="nav-item nav-link disabled">
                         <a class="nav-link" href="#"></a>
@@ -77,64 +78,91 @@
 
         </header>
 
-        <main id="main_station_info">
+        <main>
+            <div class="wrapper">
+                <div class="form-row form">
+                    <div class="col">
+                        <label class="col-form-label  form_label firstlabel">Station ID
+                            <input type="text" id="table-search" class="form-control form-control-lg input_row"
+                                placeholder="Station ID">
+                        </label>
+                        <label class="form_label">Station Name
+                            <input type="text" id="table-search" class="form-control form-control-lg input_row"
+                                placeholder="Station Name">
+                        </label>
 
-            <div class="form-row">
-                <div class="col">
-                    <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Station ID">
-                    <input type="text" id="table-search" class="form-control form-control-lg"
-                        placeholder="Station Name">
-                    <select class="form-control form-control-lg" name="District" id="District">
-                        <option value="all">All Districts</option>
-                    </select>
-                    <select class="form-control form-control-lg" name="District" id="City">
-                        <option value="all">All Cities</option>
-                    </select>
-                    <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Street">
+                        <label class="form_label">District
+                            <select class="form-control form-control-lg input_row" name="District" id="District">
 
-                </div>
-                <div class="col">
-                    <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Latitude">
-                    <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Longtitude">
-                    <div class="form-row">
-                        <div class="col">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Interative map
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                                <label class="form-check-label" for="defaultCheck2">
-                                    Conditioner
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                                <label class="form-check-label" for="defaultCheck3">
-                                    Light
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                                <label class="form-check-label" for="defaultCheck4">
-                                    Wi-fi
-                                </label>
-                            </div>
-                        </div>
+                                <option value="all">All Districts</option>
+                            </select>
+                        </label>
+                        <label class="form_label">City
+                            <select class="form-control form-control-lg input_row" name="District" id="City">
+                                    <option value="all">All Cities</option>
+                            </select>
+                        </label>
+                        <label class="form_label">Street
+                        <input type="text" id="table-search" class="form-control form-control-lg input_row"
+                            placeholder="Street">
                     </div>
-                    <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Comment">
+
+                    <div class="col">
+                            <label class="col-form-label form_label firstlabel">Latitude
+                        <input type="text" id="table-search" class="form-control form-control-lg input_row"
+                            placeholder="Latitude">
+                        </label>
+
+                            <label class="col-form-label  form_label">Longtitude
+                            <input type="text" id="table-search" class="form-control form-control-lg input_row"
+                            placeholder="Longtitude">
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input input_row_checkbox" type="checkbox" value=""
+                                        id="defaultCheck1">
+                                    <label class="form-check-label input_row_checkbox" for="defaultCheck1">
+                                        Interative map
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input input_row_checkbox" type="checkbox" value=""
+                                        id="defaultCheck2">
+                                    <label class="form-check-label input_row_checkbox" for="defaultCheck2">
+                                        Conditioner
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input input_row_checkbox" type="checkbox" value=""
+                                        id="defaultCheck3">
+                                    <label class="form-check-label input_row_checkbox" for="defaultCheck3">
+                                        Light
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input input_row_checkbox" type="checkbox" value=""
+                                        id="defaultCheck4">
+                                    <label class="form-check-label input_row_checkbox" for="defaultCheck4">
+                                        Wi-fi
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="col-form-label  form_label input_row_after_checkbox">Comment
+                        <input type="text" id="table-search"
+                            class="form-control form-control-lg " placeholder="Comment">
+                    </div>
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="col">
-                    <button type="button" class="btn btn-danger">Delete</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-primary">Edit</button>
+                <div class="form-row">
+                    <div class="col">
+                        <button type="button" class="btn btn-primary btn-block btn-lg button_row">Add Station</button>
+                    </div>
+                    <div class="col">
+                        <button type="button"
+                            class="btn btn-danger btn-primary btn-lg btn-block button_row">Delete</button>
+                    </div>
                 </div>
             </div>
 </div>
