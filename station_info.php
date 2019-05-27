@@ -17,8 +17,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
 </head>
-<?php $StationId  =$_GET{"stationID"};?> 
+
 <body>
+
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
             <a class="navbar-brand mr-auto p-2" href="index.html">
@@ -60,7 +61,7 @@
                     <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item nav-link crumb disabled">
-                    <a class="nav-link active" href="index.html">Add Station<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="index.html">Info<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link disabled">
                     <a class="nav-link" href="#">Info</a>
@@ -80,82 +81,66 @@
 
         <div class="form-row">
             <div class="col">
-                    <form action="add_station.php" method="GET">
-                    <label class="col-form-label  form_label firstlabel">Station ID
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Station ID"  name="StationId" value="<?php echo $StationId; ?>" disabled autofocus>
-            </label>
-            <label class="form_label">Station Name
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Station Name" name="StationName" value="Dizengoff 16" disabled>  
-            </label>
-                <label class="form_label">District
-                <select class="form-control form-control-lg" name="District" id="District" value="Tel Aviv" disabled>
-                    <option value="all">All Districts</option>
-                </select>
-            </label>
-            <label class="form_label">City
-                <select class="form-control form-control-lg" name="City" id="City" value="Tel Aviv" disabled>
-                    <option value="all">All Cities</option>
-                </select>
-            </label>
-            <label class="form_label">Street
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Street" name="Street" value="Dizengoff" disabled>
-            </label>
+                <input type="text" id="StationID" class="form-control form-control-lg" placeholder="Station ID" disabled>
+                <input type="text" id="StationName" class="form-control form-control-lg" placeholder="Station Name" disabled>
+                <input type="text" id="StationDistrict" class="form-control form-control-lg" placeholder="District" disabled>
+                <input type="text" id="StationCity" class="form-control form-control-lg" placeholder="City" disabled>
+                <input type="text" id="StationStreet" class="form-control form-control-lg" placeholder="Street" disabled>
             </div>
             <div class="col">
-                    <label class="col-form-label form_label firstlabel">Latitude
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Latitude" name="Latitude" value="32.2865132" disabled>
-            </label>
-                <label class="col-form-label  form_label">Longtitude
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Longtitude" name="Longtitude" value="34.8549239" disabled>
-            </label>
-
-                <div class="form-row">
-                    <div class="col">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled checked>
-                            <label class="form-check-label" for="defaultCheck1">
-                                Interative map
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-                            <label class="form-check-label" for="defaultCheck2">
-                                Conditioner
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" disabled checked>
-                            <label class="form-check-label" for="defaultCheck3">
-                                Light
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4" disabled>
-                            <label class="form-check-label" for="defaultCheck4">
-                                Wi-fi
-                            </label>
+                <input type="text" id="StationLatitude" class="form-control form-control-lg" placeholder="Latitude" disabled>
+                <input type="text" id="StationLongtitude" class="form-control form-control-lg" placeholder="Longtitude" disabled>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-muted">Smart Features</h5>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" name="Smart" type="checkbox" value="Interative map" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Interative map
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="Smart" type="checkbox" value="Conditioner" id="defaultCheck2">
+                                    <label class="form-check-label" for="defaultCheck2">
+                                        Conditioner
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" name="Smart" type="checkbox" value="Light" id="defaultCheck3">
+                                    <label class="form-check-label" for="defaultCheck3">
+                                        Light
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="Smart" type="checkbox" value="Wi-fi" id="defaultCheck4">
+                                    <label class="form-check-label" for="defaultCheck4">
+                                        Wi-fi
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <label class="col-form-label  form_label input_row_after_checkbox">Comment
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Comment" name="Comment" value="Hello World Station" disabled>
-            </label>
+
+                <input type="text" id="StationComment" class="form-control form-control-lg" placeholder="Comment" disabled>
             </div>
         </div>
         <div class="form-row">
             <div class="col">
-            <button type="submmit" class="btn btn-primary btn-block btn-lg button_row">Add Station</button>
+                <button type="button" class="btn btn-warning btn-lg btn-block">Cancel</button>
             </div>
             <div class="col">
-            <button type="button" class="btn btn-danger btn-primary btn-lg btn-block button_row">Delete</button>
+                <button type="button" class="btn btn-primary btn-block btn-lg">Save Station</button>
             </div>
 
         </div>
 
     </main>
-    
+
     <footer></footer>
     <script src="./includes/scripts.js"></script>
 </body>
