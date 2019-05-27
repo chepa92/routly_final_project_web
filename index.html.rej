@@ -1,0 +1,9 @@
+diff a/index.html b/index.html	(rejected hunks)
+@@ -97,7 +97,6 @@
+                 </select>
+             </div>
+             <div class="col-2">
+-                <button type="button" class="btn btn-success">Add New Station</button>
+                 <a href="add_station.html"><button type="button" class="btn btn-success">Add New Station</button></a>
+             </div>
+         </div>
