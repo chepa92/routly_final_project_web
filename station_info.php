@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
 </head>
+<?php $StationId  =$_GET{"stationID"};?> 
 <body>
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
@@ -81,43 +82,43 @@
             <div class="col">
                     <form action="add_station.php" method="GET">
                     <label class="col-form-label  form_label firstlabel">Station ID
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Station ID"  name="StationId" value="" autofocus>
+                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Station ID"  name="StationId" value="<?php echo $StationId; ?>" disabled autofocus>
             </label>
             <label class="form_label">Station Name
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Station Name" name="StationName" value="">  
+                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Station Name" name="StationName" value="Dizengoff 16" disabled>  
             </label>
                 <label class="form_label">District
-                <select class="form-control form-control-lg" name="District" id="District" value="">
+                <select class="form-control form-control-lg" name="District" id="District" value="Tel Aviv" disabled>
                     <option value="all">All Districts</option>
                 </select>
             </label>
             <label class="form_label">City
-                <select class="form-control form-control-lg" name="City" id="City" value="">
+                <select class="form-control form-control-lg" name="City" id="City" value="Tel Aviv" disabled>
                     <option value="all">All Cities</option>
                 </select>
             </label>
             <label class="form_label">Street
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Street" name="Street" value="">
+                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Street" name="Street" value="Dizengoff" disabled>
             </label>
             </div>
             <div class="col">
                     <label class="col-form-label form_label firstlabel">Latitude
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Latitude" name="Latitude" value="">
+                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Latitude" name="Latitude" value="32.2865132" disabled>
             </label>
                 <label class="col-form-label  form_label">Longtitude
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Longtitude" name="Longtitude" value="">
+                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Longtitude" name="Longtitude" value="34.8549239" disabled>
             </label>
 
                 <div class="form-row">
                     <div class="col">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled checked>
                             <label class="form-check-label" for="defaultCheck1">
                                 Interative map
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
                             <label class="form-check-label" for="defaultCheck2">
                                 Conditioner
                             </label>
@@ -125,13 +126,13 @@
                     </div>
                     <div class="col">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" disabled checked>
                             <label class="form-check-label" for="defaultCheck3">
                                 Light
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4" disabled>
                             <label class="form-check-label" for="defaultCheck4">
                                 Wi-fi
                             </label>
@@ -139,7 +140,7 @@
                     </div>
                 </div>
                 <label class="col-form-label  form_label input_row_after_checkbox">Comment
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Comment" name="Comment" value="">
+                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Comment" name="Comment" value="Hello World Station" disabled>
             </label>
             </div>
         </div>

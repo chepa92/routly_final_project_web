@@ -136,5 +136,11 @@ main{
 }
 
 #main_station_info .form-control{
-    margin: 30px 0px;
+    margin: 2px 0px;
+}
+.form_label {
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+    display: block;
 }
