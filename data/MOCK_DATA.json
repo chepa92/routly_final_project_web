@@ -8,10 +8,10 @@
     "Longitude": "34.8549239",
     "Comment": "Hello World Station",
     "Smart": {
-      "Wifi": true,
-      "SmartScreen": true,
-      "Conditioner": true,
-      "Light": true
+      "Wifi": "True",
+      "SmartScreen": "True",
+      "Conditioner": "True",
+      "Light": "True"
     }
   },
   {
@@ -24,10 +24,10 @@
     "Longitude": "34.8549239",
     "Comment": "Test Station",
     "Smart": {
-      "Wifi": true,
-      "SmartScreen": true,
-      "Conditioner": true,
-      "Light": true
+      "Wifi": "True",
+      "SmartScreen": "True",
+      "Conditioner": "True",
+      "Light": "True"
     }
   },
   {
@@ -40,10 +40,10 @@
     "Longitude": "34.8549239",
     "Comment": "Comment",
     "Smart": {
-      "Wifi": true,
-      "SmartScreen": true,
-      "Conditioner": true,
-      "Light": true
+      "Wifi": "False",
+      "SmartScreen": "True",
+      "Conditioner": "True",
+      "Light": "True"
     }
   },
   {
@@ -56,10 +56,10 @@
     "Longitude": "34.8549239",
     "Comment": "beta station",
     "Smart": {
-      "Wifi": true,
-      "SmartScreen": true,
-      "Conditioner": true,
-      "Light": true
+      "Wifi": "True",
+      "SmartScreen": "False",
+      "Conditioner": "True",
+      "Light": "True"
     }
   },
   {
@@ -72,10 +72,10 @@
     "Longitude": "34.8549239",
     "Comment": "Rom station",
     "Smart": {
-      "Wifi": true,
-      "SmartScreen": true,
-      "Conditioner": true,
-      "Light": true
+      "Wifi": "True",
+      "SmartScreen": "True",
+      "Conditioner": "False",
+      "Light": "True"
     }
   },
   {
@@ -88,10 +88,10 @@
     "Longitude": "34.8549239",
     "Comment": "Yonit Station",
     "Smart": {
-      "Wifi": true,
-      "SmartScreen": true,
-      "Conditioner": true,
-      "Light": true
+      "Wifi": "True",
+      "SmartScreen": "True",
+      "Conditioner": "True",
+      "Light": "False"
     }
   },
   {
@@ -104,10 +104,10 @@
     "Longitude": "34.8549239",
     "Comment": "No roof station",
     "Smart": {
-      "Wifi": true,
-      "SmartScreen": true,
-      "Conditioner": true,
-      "Light": true
+      "Wifi": "False",
+      "SmartScreen": "True",
+      "Conditioner": "True",
+      "Light": "True"
     }
   },
   {
@@ -120,10 +120,10 @@
     "Longitude": "34.8549239",
     "Comment": "Nice Station",
     "Smart": {
-      "Wifi": true,
-      "SmartScreen": true,
-      "Conditioner": true,
-      "Light": true
+      "Wifi": "True",
+      "SmartScreen": "True",
+      "Conditioner": "True",
+      "Light": "True"
     }
   },
   {
@@ -136,10 +136,10 @@
     "Longitude": "34.8549239",
     "Comment": "Yonit Station",
     "Smart": {
-      "Wifi": true,
-      "SmartScreen": true,
-      "Conditioner": true,
-      "Light": true
+      "Wifi": "True",
+      "SmartScreen": "True",
+      "Conditioner": "True",
+      "Light": "True"
     }
   },
   {
@@ -152,10 +152,10 @@
     "Longitude": "34.8549239",
     "Comment": "Bad Station",
     "Smart": {
-      "Wifi": true,
-      "SmartScreen": true,
-      "Conditioner": true,
-      "Light": true
+      "Wifi": "True",
+      "SmartScreen": "True",
+      "Conditioner": "True",
+      "Light": "True"
     }
   }
 ]
