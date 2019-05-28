@@ -1,6 +1,42 @@
 $(document).ready(function () {
 
 
+    // getting stationID to parameter
+    function findGetParameter() {
+        var result = null,
+            tmp = [];
+        location.search
+            .substr(1)
+            .split("&")
+            .forEach(function (item) {
+              tmp = item.split("=");
+              if (tmp[0] === 'stationID') result = decodeURIComponent(tmp[1]);
+            });
+        return result;
+    }
+
+    let stationID = findGetParameter();
+
+    var json_data = []
+    $.getJSON("data/MOCK_DATA.json", function (data) {
+        json_data = data
+
+        var i;
+        for (i = 0; i < json_data.length; ++i) {
+            if (json_data[i].StationId == stationID){
+                $('#StationID').attr('value', json_data[i].StationId)
+                $('#StationName').attr('value', json_data[i].StationName)
+                // .
+                // .
+                // .
+                // .
+
+                break;
+            }
+        }
+    });
+
+
 
     var json_data = []
     $.getJSON("data/MOCK_DATA.json", function (data) {

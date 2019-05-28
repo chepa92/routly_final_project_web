@@ -61,7 +61,7 @@
                     <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item nav-link crumb disabled">
-                    <a class="nav-link active" href="index.html">Add Station<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="index.html">Info<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link disabled">
                     <a class="nav-link" href="#">Info</a>
@@ -78,77 +78,67 @@
     </header>
 
     <main id="main_station_info">
-        <form action="add_station.php" method="get">
-            <div class="form-row">
-                <div class="col">
-                    <input type="text" name="StationID" id="table-search" class="form-control form-control-lg"
-                        placeholder="Station ID">
-                    <input type="text" name="StationName" id="table-search" class="form-control form-control-lg"
-                        placeholder="Station Name">
-                    <select class="form-control form-control-lg" name="District" id="District">
-                        <option value="all">All Districts</option>
-                    </select>
-                    <select class="form-control form-control-lg" name="District" id="City">
-                        <option value="all">All Cities</option>
-                    </select>
-                    <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Street">
 
-                </div>
-                <div class="col">
-                    <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Latitude">
-                    <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Longtitude">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-muted">Smart Features</h5>
-                            <div class="form-row">
-                                <div class="col">
-                                    <div class="form-check">
-                                        <input class="form-check-input" name="Smart" type="checkbox"
-                                            value="Interative map" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1">
-                                            Interative map
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" name="Smart" type="checkbox" value="Conditioner"
-                                            id="defaultCheck2">
-                                        <label class="form-check-label" for="defaultCheck2">
-                                            Conditioner
-                                        </label>
-                                    </div>
+        <div class="form-row">
+            <div class="col">
+                <input type="text" id="StationID" class="form-control form-control-lg" placeholder="Station ID" disabled>
+                <input type="text" id="StationName" class="form-control form-control-lg" placeholder="Station Name" disabled>
+                <input type="text" id="StationDistrict" class="form-control form-control-lg" placeholder="District" disabled>
+                <input type="text" id="StationCity" class="form-control form-control-lg" placeholder="City" disabled>
+                <input type="text" id="StationStreet" class="form-control form-control-lg" placeholder="Street" disabled>
+            </div>
+            <div class="col">
+                <input type="text" id="StationLatitude" class="form-control form-control-lg" placeholder="Latitude" disabled>
+                <input type="text" id="StationLongtitude" class="form-control form-control-lg" placeholder="Longtitude" disabled>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-muted">Smart Features</h5>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" name="Smart" type="checkbox" value="Interative map" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Interative map
+                                    </label>
                                 </div>
-                                <div class="col">
-                                    <div class="form-check">
-                                        <input class="form-check-input" name="Smart" type="checkbox" value="Light"
-                                            id="defaultCheck3">
-                                        <label class="form-check-label" for="defaultCheck3">
-                                            Light
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" name="Smart" type="checkbox" value="Wi-fi"
-                                            id="defaultCheck4">
-                                        <label class="form-check-label" for="defaultCheck4">
-                                            Wi-fi
-                                        </label>
-                                    </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="Smart" type="checkbox" value="Conditioner" id="defaultCheck2">
+                                    <label class="form-check-label" for="defaultCheck2">
+                                        Conditioner
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" name="Smart" type="checkbox" value="Light" id="defaultCheck3">
+                                    <label class="form-check-label" for="defaultCheck3">
+                                        Light
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="Smart" type="checkbox" value="Wi-fi" id="defaultCheck4">
+                                    <label class="form-check-label" for="defaultCheck4">
+                                        Wi-fi
+                                    </label>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Comment">
-                </div>
+                <input type="text" id="StationComment" class="form-control form-control-lg" placeholder="Comment" disabled>
             </div>
-            <div class="form-row">
-                <div class="col">
-                    <button type="button" class="btn btn-warning btn-lg btn-block">Cancel</button>
-                </div>
-                <div class="col">
-                    <input type="submit" value="Save Station" class="btn btn-primary btn-block btn-lg">
-                </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <button type="button" class="btn btn-warning btn-lg btn-block">Cancel</button>
             </div>
-        </form>
+            <div class="col">
+                <button type="button" class="btn btn-primary btn-block btn-lg">Save Station</button>
+            </div>
+
+        </div>
+
     </main>
 
     <footer></footer>
