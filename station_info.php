@@ -52,7 +52,7 @@
         </nav>
 
         <nav class="navbar navbar-expand-lg navbar-light py-0">
-            <ul class="nav collapse navbar-collapse nav-justified d-none d-sm-block d-sm-none" id="navbarNav">
+            <ul class="nav collapse navbar-collapse nav-justified d-none d-sm-block d-sm-none" id="navbarNav2">
                 <li class="nav-item nav-link disabled">
                     <a class="nav-link" href="#"></a>
                 </li>
@@ -89,7 +89,7 @@
 
                 <div class="form-group">
                     <label for="District">District</label>
-                    <input type="text" id="StationID" class="form-control form-control-lg" placeholder="District" disabled>
+                    <input type="text" id="District" class="form-control form-control-lg" placeholder="District" disabled>
                 </div>
 
                 <div class="form-group">
