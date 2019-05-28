@@ -74,8 +74,9 @@
         </nav>
 
     </header>
-    <h1 class="text-center">Station Info</h1>
+
     <main id="main_station_info">
+
         <div class="form-row">
             <div class="col">
 
