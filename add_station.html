@@ -81,34 +81,35 @@
 
         <div class="form-row">
             <div class="col">
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Station ID">
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Station Name">
-                <select class="form-control form-control-lg" name="District" id="District">
+                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Station ID" name="StationId" value="" autofocus>
+                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Station Name"  name="StationName" value="">
+                <select class="form-control form-control-lg" name="District" id="District" value="">
                     <option value="all">All Districts</option>
                 </select>
-                <select class="form-control form-control-lg" name="District" id="City">
+                <select class="form-control form-control-lg" name="City" id="City"
+                value="">
                     <option value="all">All Cities</option>
                 </select>
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Street">
+                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Street" name="Street" value="">
 
             </div>
             <div class="col">
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Latitude">
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Longtitude">
+                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Latitude" name="Latitude" value="">
+                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Longtitude"  name="Longitude" value="">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title text-muted">Smart Features</h5>
                         <div class="form-row">
                             <div class="col">
                                 <div class="custom-control custom-checkbox">
-                                    <input class="custom-control-input" name="Smart" type="checkbox"
+                                    <input class="custom-control-input" name="Smart.SmartScreen" type="checkbox"
                                         value="Interative map" id="customCheck1">
                                     <label class="custom-control-label" for="customCheck1">
                                         Interative map
                                     </label>
                                 </div>
                                 <div class="custom-control custom-checkbox">
-                                    <input class="custom-control-input" name="Smart" type="checkbox" value="Conditioner"
+                                    <input class="custom-control-input" name="Smart.Conditioner" type="checkbox" value="Conditioner"
                                         id="customCheck2">
                                     <label class="custom-control-label" for="customCheck2">
                                         Conditioner
@@ -117,13 +118,13 @@
                             </div>
                             <div class="col">
                                 <div class="custom-control custom-checkbox">
-                                    <input class="custom-control-input" name="Smart" type="checkbox" value="Light"
+                                    <input class="custom-control-input" name="Smart.Light" type="checkbox" value="Light"
                                         id="customCheck3">
                                     <label class="custom-control-label" for="customCheck3">
                                         Light </label>
                                 </div>
                                 <div class="custom-control custom-checkbox">
-                                    <input class="custom-control-input" name="Smart" type="checkbox" value="Light"
+                                    <input class="custom-control-input" name="Smart.Wifi" type="checkbox" value="Light"
                                         id="customCheck4">
                                     <label class="custom-control-label" for="customCheck4">
                                         Wi-fi
@@ -134,7 +135,7 @@
                     </div>
                 </div>
 
-                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Comment">
+                <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Comment" name="Comment" value="">
             </div>
         </div>
         <div class="form-row">
