@@ -89,21 +89,21 @@
                 <input type="text" id="StationName" class="form-control form-control-lg" placeholder="Station Name" disabled>
                 </label>
                 <label class="form_label">District
-                <input type="text" id="StationDistrict" class="form-control form-control-lg" placeholder="District" disabled>
+                <input type="text" id="District" class="form-control form-control-lg" placeholder="District" disabled>
                 </label>
                 <label class="form_label">City
-                <input type="text" id="StationCity" class="form-control form-control-lg" placeholder="City" disabled>
+                <input type="text" id="City" class="form-control form-control-lg" placeholder="City" disabled>
                 </label>
             <label class="form_label">Street
-                <input type="text" id="StationStreet" class="form-control form-control-lg" placeholder="Street" disabled>
+                <input type="text" id="Street" class="form-control form-control-lg" placeholder="Street" disabled>
                 </label>
             </div>
             <div class="col">
             <label class="col-form-label form_label firstlabel">Latitude
-                <input type="text" id="StationLatitude" class="form-control form-control-lg" placeholder="Latitude" disabled>
+                <input type="text" id="Latitude" class="form-control form-control-lg" placeholder="Latitude" disabled>
                 </label>
-                <label class="col-form-label  form_label">Longtitude
-                <input type="text" id="StationLongtitude" class="form-control form-control-lg" placeholder="Longtitude" disabled>
+                <label class="col-form-label  form_label">Longitude
+                <input type="text" id="Longitude" class="form-control form-control-lg" placeholder="Longitude" disabled>
                 </label>
                 <div class="card">
                     <div class="card-body">
@@ -112,14 +112,14 @@
                             <div class="col">
                             <div class="custom-control custom-checkbox">
                                     <input class="custom-control-input" name="Smart" type="checkbox"
-                                        value="Interative map" id="customCheck1">
+                                        value="Interative map" id="customCheck1" disabled>
                                     <label class="custom-control-label" for="customCheck1">
                                         Interative map
                                     </label>
                                 </div>
                                 <div class="custom-control custom-checkbox">
-                                    <input class="custom-control-input" name="Smart" type="checkbox" value="Conditioner"
-                                        id="customCheck2">
+                                    <input class="custom-control-input" name="Smart.Conditioner" type="checkbox" value="Conditioner"
+                                        id="customCheck2" disabled>
                                     <label class="custom-control-label" for="customCheck2">
                                         Conditioner
                                     </label>
@@ -128,13 +128,13 @@
                             <div class="col">
                                 <div class="custom-control custom-checkbox">
                                     <input class="custom-control-input" name="Smart" type="checkbox" value="Light"
-                                        id="customCheck3">
+                                        id="customCheck3" disabled>
                                     <label class="custom-control-label" for="customCheck3">
                                         Light </label>
                                 </div>
                                 <div class="custom-control custom-checkbox">
-                                    <input class="custom-control-input" name="Smart" type="checkbox" value="Light"
-                                        id="customCheck4">
+                                    <input class="custom-control-input" name="Smart.Wifi" type="checkbox" value="Light"
+                                        id="customCheck4" disabled>
                                     <label class="custom-control-label" for="customCheck4">
                                         Wi-fi
                                     </label>
@@ -144,7 +144,7 @@
                     </div>
                 </div>
                 <label class="col-form-label  form_label input_row_after_checkbox">Comment
-                <input type="text" id="StationComment" class="form-control form-control-lg" placeholder="Comment" disabled>
+                <input type="text" id="Comment" class="form-control form-control-lg" placeholder="Comment" disabled>
                 </label>
             </div>
         </div>
