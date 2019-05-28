@@ -43,6 +43,10 @@ section {
     color: black;
 }
 
+.navhover a:hover { 
+    color: #6d6d6d
+  }
+  
 @viewport {
     width: 480px;
     zoom: 1;
