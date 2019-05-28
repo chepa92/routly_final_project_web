@@ -19,10 +19,12 @@
 
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
-            <a class="navbar-brand mr-auto p-2" id="logo" href="index.html">
-                <a class="material-icons navbar-brand p-2 icon" href="#">notifications</a>
-                <a class="material-icons navbar-brand p-2 icon" href="#">settings</a>
-                <img class="d-flex p-2" src="/images/PAmit.png" width="60" alt="">
+            <a class="navbar-brand mr-auto p-2" href="index.html">
+                <img src="/images/logo.png" width="160" alt="">
+            </a>
+            <a class="material-icons navbar-brand p-2 icon" href="#">notifications</a>
+            <a class="material-icons navbar-brand p-2 icon" href="#">settings</a>
+            <img class="d-flex p-2" src="/images/PAmit.png" width="60" alt="">
         </nav>
 
         <nav class="navbar navbar-expand-lg navbar-light navbar-second">
@@ -144,15 +146,13 @@
         </div>
         <div class="form-row mt-3">
             <div class="col mr-5 mb-4">
-                <button type="button" class="btn btn-danger btn-lg btn-block">Delete Station</button>
+                <a class="btn btn-danger btn-lg btn-block" href="#" role="button">Delete Station</a>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-primary btn-block btn-lg">Edit Station</button>
+                <button type="button" name="stationID" class="btn btn-primary btn-block btn-lg" value="Edit Station">
             </div>
         </div>
-
     </main>
-
     <footer></footer>
     <script src="./includes/scripts.js"></script>
 </body>

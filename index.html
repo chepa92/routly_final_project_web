@@ -17,13 +17,16 @@
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./includes/style.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
-            <a class="navbar-brand mr-auto p-2" id="logo" href="index.html">
-            <a class="material-icons navbar-brand p-2" href="#">notifications</a>
-            <a class="material-icons navbar-brand p-2" href="#">settings</a>
-            <img src="/images/PAmit.png" width="60" alt="">
+                <a class="navbar-brand mr-auto p-2" href="index.html">
+                        <img src="/images/logo.png" width="160" alt="">
+                </a>
+                <a class="material-icons navbar-brand p-2" href="#">notifications</a>
+                <a class="material-icons navbar-brand p-2" href="#">settings</a>
+                <img src="/images/PAmit.png" width="60" alt="">
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light navbar-second navhover">
             <span class="navbar-toggler navbar-text-current">Station List</span>
@@ -93,11 +96,11 @@
                 </select>
             </div>
             <div class="col-2">
-                    <input type="button" class="btn btn-success" onclick="location.href='add_station.html';" value="Add New Station"/>
+                <a class="btn btn-success w-100 h-100" href="add_station.html" role="button">Add New Station</a>
             </div>
         </div>
         <form action="station_info.php" method="get">
-            <table id="table" class="table table-striped table-responsive-md table-bordered">
+            <table id="table" class="table table-striped table-responsive-md table-bordered mt-4">
                 <thead class="table-success">
                     <tr>
                         <th scope="col">ID</th>
@@ -116,7 +119,7 @@
         </form>
 
     </main>
-    
+
     <footer></footer>
     <script src="./includes/scripts.js"></script>
 </body>
