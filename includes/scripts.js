@@ -55,6 +55,7 @@ $(document).ready(function () {
 
     var json_data = []
     $.getJSON("data/MOCK_DATA.json", function (data) {
+        var flag=0;
         json_data = data
         for (var row of data) {
             var table_row = $(
@@ -69,19 +70,44 @@ $(document).ready(function () {
                 '<td>' + '<input type="submit" name="stationID" class="edit_button" value=' + row.StationId + "></input></td>" +
                 '</tr>'
             )
-            var optionDist = $(
-                '<option>' + row.District + '</option>'
-            )
-            $('#District').append(optionDist)
-            $('tbody').append(table_row)
-
-
-            var optionCity = $(
-                '<option>' + row.City + '</option>'
-            )
-            $('#City').append(optionCity)
-            $('tbody').append(table_row)
+            
+            children = District.childNodes
+            for (var i = 3; i < children.length; i++) {
+               var option= children[i]
+               var district = option.textContent;
+               if(district==row.District)
+                           flag=1;
+            }
+        if(flag==0)
+        {
+        var optionDist = $(
+            '<option>' + row.District + '</option>'
+        )
+        $('#District').append(optionDist)
+        $('tbody').append(table_row)
         }
+        flag=0;
+
+
+
+        children = City.childNodes
+            for (var i = 3; i < children.length; i++) {
+               var option= children[i]
+               var city = option.textContent;
+               if(city==row.City)
+                           flag=1;
+            }
+            
+        if(flag==0)
+        {
+        var optionCity = $(
+            '<option>' + row.City + '</option>'
+        )
+        $('#City').append(optionCity)
+        $('tbody').append(table_row)
+        }
+        flag=0;
+    }
 
     });
 
