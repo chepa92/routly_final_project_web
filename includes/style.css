@@ -12,6 +12,17 @@ section {
     font-family: 'ABeeZee', sans-serif;
 }
 
+#logo{
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-image:url(../images/logo.png);
+    background-size: contain;
+    height: 65px;
+    width: 200px;
+    background-repeat: no-repeat;
+}
+
+
 .navbar-top {
     background-color: #d9f3d2;
 }
@@ -46,7 +57,7 @@ section {
 .navhover a:hover { 
     color: #6d6d6d
   }
-  
+
 @viewport {
     width: 480px;
     zoom: 1;
