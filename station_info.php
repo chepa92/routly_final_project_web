@@ -24,7 +24,7 @@
             </a>
             <a class="material-icons navbar-brand p-2 icon" href="#">notifications</a>
             <a class="material-icons navbar-brand p-2 icon" href="#">settings</a>
-            <img class="d-flex p-2" src="images/PAmit.png" width="60" alt="">
+            <img class="d-flex" src="images/PAmit.png" width="60" alt="">
         </nav>
 
         <nav class="navbar navbar-expand-lg navbar-light navbar-second">
