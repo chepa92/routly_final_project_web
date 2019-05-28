@@ -74,9 +74,9 @@ $(document).ready(function () {
         var optionDist = $(
             '<option>' + row.District + '</option>'
         )
+}
         $('#District').append(optionDist)
         $('tbody').append(table_row)
-        }
         flag=0;
 
 
@@ -94,9 +94,9 @@ $(document).ready(function () {
         var optionCity = $(
             '<option>' + row.City + '</option>'
         )
+        }
         $('#City').append(optionCity)
         $('tbody').append(table_row)
-        }
         flag=0;
     }
 
