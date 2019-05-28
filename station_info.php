@@ -34,19 +34,19 @@
             </button>
             <ul class="nav collapse navbar-collapse nav-justified" id="navbarNav">
                 <li class="nav-item nav-link">
-                    <a class="nav-link" href="#">My Dashboard</a>
+                    <a class="nav-link text-white font-weight-bold" href="#">My Dashboard</a>
                 </li>
-                <li class="nav-item nav-link selected current">
+                <li class="nav-item nav-link selected current font-weight-bold">
                     <a class="nav-link active" href="index.html">Station<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link">
-                    <a class="nav-link" href="#">Drivers</a>
+                    <a class="nav-link text-white font-weight-bold" href="#">Drivers</a>
                 </li>
                 <li class="nav-item nav-link">
-                    <a class="nav-link" href="#">Schedule</a>
+                    <a class="nav-link text-white font-weight-bold" href="#">Schedule</a>
                 </li>
                 <li class="nav-item nav-link">
-                    <a class="nav-link" href="#">Billing</a>
+                    <a class="nav-link text-white font-weight-bold" href="#">Billing</a>
                 </li>
             </ul>
         </nav>
@@ -57,10 +57,10 @@
                     <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item nav-link crumb disabled">
-                    <a class="nav-link active" href="index.html">Info<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active font-weight-bold" href="index.html">Info<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link disabled">
-                    <a class="nav-link" href="#">Info</a>
+                    <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item nav-link disabled">
                     <a class="nav-link" href="#"></a>
@@ -149,7 +149,7 @@
                 <a class="btn btn-danger btn-lg btn-block" href="#" role="button">Delete Station</a>
             </div>
             <div class="col">
-                <button type="button" name="stationID" class="btn btn-primary btn-block btn-lg" value="Edit Station">
+                <button type="button" name="stationID" class="btn btn-primary btn-block btn-lg">Edit Station</button>
             </div>
         </div>
     </main>

@@ -64,8 +64,11 @@ $(document).ready(function () {
                 '<td>' + row.Comment + '</td>' +
                 '<td>' + '<input type="submit" name="stationID" class="edit_button" value=' + row.StationId + "></input></td>" +
                 '</tr>'
+
+                // '<input type="image" name="stationID" src="/images/information.png" value=' + row.StationId + "></input></td>" +
+
             )
-            
+        
             children = District.childNodes
             for (var i = 3; i < children.length; i++) {
                var option= children[i]
