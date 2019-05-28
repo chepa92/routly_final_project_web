@@ -64,6 +64,7 @@ $(document).ready(function () {
             )
             
 <<<<<<< HEAD
+<<<<<<< HEAD
             children = District.childNodes
             for (var i = 3; i < children.length; i++) {
                var option= children[i]
@@ -99,6 +100,8 @@ $(document).ready(function () {
         $('#City').append(optionCity)
         $('tbody').append(table_row)
 =======
+=======
+>>>>>>> 6cc96142ae904d2605cff290494d1de3341bdbff
                 children = District.childNodes
                 for (var i = 3; i < children.length; i++) {
                    var option= children[i];
@@ -137,7 +140,10 @@ $(document).ready(function () {
             $('tbody').append(table_row)
             
             flag=0;
+<<<<<<< HEAD
 >>>>>>> small bug fix javascript
+=======
+>>>>>>> 6cc96142ae904d2605cff290494d1de3341bdbff
         }
         flag=0;
     }
