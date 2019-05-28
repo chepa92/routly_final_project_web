@@ -11,9 +11,7 @@
     padding: 0 1rem;
 }
 
-.navbar-therd {
-    padding: 0 1rem;
-}
+
 
 .selected {
     background-color: #62c462;
@@ -75,10 +73,6 @@ main {
         display: none;
     }
 
-    .navbar-therd {
-        display: none;
-    }
-
     .col-4,
     .col-2 {
         max-width: 100% !important;
@@ -87,10 +81,6 @@ main {
 
     .form-row {
         display: block;
-    }
-
-    .form-control-smart {
-        display: none;
     }
 
     .navbar-text-current {

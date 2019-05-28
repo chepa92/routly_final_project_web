@@ -51,8 +51,8 @@
             </ul>
         </nav>
 
-        <nav class="navbar navbar-expand-lg navbar-light navbar-therd">
-            <ul class="nav collapse navbar-collapse nav-justified" id="navbarNav">
+        <nav class="navbar navbar-expand-lg navbar-light py-0">
+            <ul class="nav collapse navbar-collapse nav-justified d-none d-sm-block d-sm-none" id="navbarNav">
                 <li class="nav-item nav-link disabled">
                     <a class="nav-link" href="#"></a>
                 </li>
