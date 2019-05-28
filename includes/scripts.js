@@ -26,10 +26,17 @@ $(document).ready(function () {
             if (json_data[i].StationId == stationID){
                 $('#StationID').attr('value', json_data[i].StationId)
                 $('#StationName').attr('value', json_data[i].StationName)
-                // .
-                // .
-                // .
-                // .
+                $('#District').attr('value', json_data[i].District)
+                $('#City').attr('value', json_data[i].City)
+                $('#Street').attr('value', json_data[i].Street)
+                $('#Latitude').attr('value', json_data[i].Latitude)
+                $('#Longitude').attr('value', json_data[i].Longitude)
+                $('#Comment').attr('value', json_data[i].Comment)
+                $('#Smart.Wifi').attr('value', json_data[i].Smart.Wifi)
+                $('#Smart.SmartScreen').attr('value', json_data[i].Smart.SmartScreen)
+                $('#Smart.Conditioner').attr('value', json_data[i].Smart.Conditioner)
+                $('#Smart.Light').attr('value', json_data[i].Smart.Light)
+                $('#Comment').attr('value', json_data[i].Comment)
 
                 break;
             }
