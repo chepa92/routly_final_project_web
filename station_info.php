@@ -96,13 +96,13 @@
                         <div class="form-row">
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" name="Smart" type="checkbox" value="Interative map" id="defaultCheck1">
+                                    <input class="form-check-input" name="Smart1" type="checkbox" value="Interative map" id="defaultCheck1">
                                     <label class="form-check-label" for="defaultCheck1">
                                         Interative map
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="Smart" type="checkbox" value="Conditioner" id="defaultCheck2">
+                                    <input class="form-check-input" name="Smart2" type="checkbox" value="Conditioner" id="defaultCheck2">
                                     <label class="form-check-label" for="defaultCheck2">
                                         Conditioner
                                     </label>
@@ -110,13 +110,13 @@
                             </div>
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" name="Smart" type="checkbox" value="Light" id="defaultCheck3">
+                                    <input class="form-check-input" name="Smart3" type="checkbox" value="Light" id="defaultCheck3">
                                     <label class="form-check-label" for="defaultCheck3">
                                         Light
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="Smart" type="checkbox" value="Wi-fi" id="defaultCheck4">
+                                    <input class="form-check-input" name="Smart4" type="checkbox" value="Wi-fi" id="defaultCheck4">
                                     <label class="form-check-label" for="defaultCheck4">
                                         Wi-fi
                                     </label>

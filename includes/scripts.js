@@ -26,11 +26,26 @@ $(document).ready(function () {
             if (json_data[i].StationId == stationID){
                 $('#StationID').attr('value', json_data[i].StationId)
                 $('#StationName').attr('value', json_data[i].StationName)
-                // .
-                // .
-                // .
-                // .
+                $('#StationDistrict').attr('value', json_data[i].District)
+                $('#StationCity').attr('value', json_data[i].City)
+                $('#StationStreet').attr('value', json_data[i].Street)
+                $('#StationLatitude').attr('value', json_data[i].Latitude)
+                $('#StationLongtitude').attr('value', json_data[i].Longitude)
+                $('#StationComment').attr('value', json_data[i].Comment)
 
+                if (json_data[i].Smart.SmartScreen == 'True')
+                    $('input[name=Smart1').prop('checked', true)
+
+                if (json_data[i].Smart.Conditioner == 'True')
+                    $('input[name=Smart2').prop('checked', true)
+
+                if (json_data[i].Smart.Light == 'True')
+                    $('input[name=Smart3').prop('checked', true)
+
+                if (json_data[i].Smart.Wifi == 'True')
+                    $('input[name=Smart4').prop('checked', true)
+
+                
                 break;
             }
         }
