@@ -10,7 +10,6 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="./includes/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
@@ -75,7 +74,7 @@
     <main id="main_station_info">
 
         <div class="form-row">
-            <div class="col">
+            <div class="col mr-5">
                 <div class="form-group">
                     <label for="StationID">Station ID</label>
                     <input type="text" id="StationID" class="form-control form-control-lg" placeholder="Station ID" disabled>
@@ -143,14 +142,13 @@
                 </div>
             </div>
         </div>
-        <div class="form-row">
-            <div class="col">
-                <button type="button" class="btn btn-primary btn-block btn-lg">Save Station</button>
+        <div class="form-row mt-3">
+            <div class="col mr-5 mb-4">
+                <button type="button" class="btn btn-danger btn-lg btn-block">Delete Station</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-warning btn-lg btn-block">Cancel</button>
+                <button type="button" class="btn btn-primary btn-block btn-lg">Edit Station</button>
             </div>
-
         </div>
 
     </main>

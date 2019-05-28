@@ -12,7 +12,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="./includes/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
@@ -76,98 +75,98 @@
     </header>
 
     <main id="main_station_info">
-        <div class="form-row pt-5">
-            <div class="col">
-                <div class="form-group">
-                    <input type="text" id="table-search" class="form-control form-control-lg y-3"
-                        placeholder="Station ID" name="StationId" value="" autofocus>
+        <form action="save_station.php" method="get">
+            <div class="form-row pt-5">
+                <div class="col mr-5">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg y-3" placeholder="Station ID"
+                            name="StationId" value="" autofocus>
+                    </div>
+                    <div class="form-group pt-3">
+                        <input type="text" class="form-control form-control-lg" placeholder="Station Name"
+                            name="StationName" value="">
+                    </div>
+                    <div class="form-group pt-3">
+                        <select class="form-control form-control-lg" name="District" id="District" value="">
+                            <option value="all">All Districts</option>
+                        </select>
+                    </div>
+                    <div class="form-group pt-3">
+                        <select class="form-control form-control-lg" name="City" id="City" value="">
+                            <option value="all">All Cities</option>
+                        </select>
+                    </div>
+                    <div class="form-group pt-3">
+                        <input type="text" class="form-control form-control-lg" placeholder="Street" name="Street"
+                            value="">
+                    </div>
                 </div>
-                <div class="form-group pt-3">
-                    <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Station Name"
-                        name="StationName" value="">
-                </div>
-
-                <div class="form-group pt-3">
-                    <select class="form-control form-control-lg" name="District" id="District" value="">
-                        <option value="all">All Districts</option>
-                    </select>
-                </div>
-                <div class="form-group pt-3">
-                    <select class="form-control form-control-lg" name="City" id="City" value="">
-                        <option value="all">All Cities</option>
-                    </select>
-                </div>
-                <div class="form-group pt-3">
-                    <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Street"
-                        name="Street" value="">
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Latitude"
-                        name="Latitude" value="">
-                </div>
-                <div class="form-group pt-3">
-                    <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Longtitude"
-                        name="Longitude" value="">
-                </div>
-                <div class="form-group pt-3">
-                    <input type="text" id="table-search" class="form-control form-control-lg" placeholder="Comment"
-                        name="Comment" value="">
-                </div>
-                <div class="form-group pt-3">
-                    <div class="card pb-1">
-                        <div class="card-body">
-                            <h5 class="card-title text-muted">Smart Features</h5>
-                            <div class="form-row">
-                                <div class="col">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart.SmartScreen" type="checkbox"
-                                            value="Interative map" id="customCheck1">
-                                        <label class="custom-control-label" for="customCheck1">
-                                            Interative map
-                                        </label>
+                <div class="col">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" placeholder="Latitude" name="Latitude"
+                            value="">
+                    </div>
+                    <div class="form-group pt-3">
+                        <input type="text" class="form-control form-control-lg" placeholder="Longtitude"
+                            name="Longitude" value="">
+                    </div>
+                    <div class="form-group pt-3">
+                        <input type="text" class="form-control form-control-lg" placeholder="Comment" name="Comment"
+                            value="">
+                    </div>
+                    <div class="form-group pt-3">
+                        <div class="card pb-1">
+                            <div class="card-body">
+                                <h5 class="card-title text-muted">Smart Features</h5>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" name="Smart.SmartScreen" type="checkbox"
+                                                value="Interative map" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Interative map
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" name="Smart.Conditioner" type="checkbox"
+                                                value="Conditioner" id="customCheck2">
+                                            <label class="custom-control-label" for="customCheck2">
+                                                Conditioner
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart.Conditioner" type="checkbox"
-                                            value="Conditioner" id="customCheck2">
-                                        <label class="custom-control-label" for="customCheck2">
-                                            Conditioner
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart.Light" type="checkbox"
-                                            value="Light" id="customCheck3">
-                                        <label class="custom-control-label" for="customCheck3">
-                                            Light </label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart.Wifi" type="checkbox"
-                                            value="Light" id="customCheck4">
-                                        <label class="custom-control-label" for="customCheck4">
-                                            Wi-fi
-                                        </label>
+                                    <div class="col">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" name="Smart.Light" type="checkbox"
+                                                value="Light" id="customCheck3">
+                                            <label class="custom-control-label" for="customCheck3">
+                                                Light </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" name="Smart.Wifi" type="checkbox"
+                                                value="Light" id="customCheck4">
+                                            <label class="custom-control-label" for="customCheck4">
+                                                Wi-fi
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="form-row pt-3">
-            <div class="col">
-                <button type="button" class="btn btn-primary btn-block btn-lg">Save Station</button>
-            </div>
-            <div class="col">
-                <button type="button" class="btn btn-warning btn-lg btn-block">Cancel</button>
-            </div>
+            <div class="form-row pt-3">
+                <div class="col mr-5">
+                    <button type="button" class="btn btn-warning btn-lg btn-block">Cancel</button>
+                </div>
+                <div class="col">
 
-        </div>
-
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">Save Station</button>
+                </div>
+            </div>
+        </form>
     </main>
 
     <footer></footer>
