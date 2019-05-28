@@ -23,9 +23,11 @@
 .nav-link .active {
     color: black;
 }
-
+.navhover a{
+color: white
+}
 .navhover a:hover {
-    color: #6d6d6d
+    color: #6d6d6d;
 }
 
 @viewport {
