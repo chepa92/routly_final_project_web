@@ -81,15 +81,30 @@
 
         <div class="form-row">
             <div class="col">
+
+            <label class="col-form-label  form_label firstlabel">Station ID
                 <input type="text" id="StationID" class="form-control form-control-lg" placeholder="Station ID" disabled>
+                </label>
+            <label class="form_label">Station Name
                 <input type="text" id="StationName" class="form-control form-control-lg" placeholder="Station Name" disabled>
+                </label>
+                <label class="form_label">District
                 <input type="text" id="StationDistrict" class="form-control form-control-lg" placeholder="District" disabled>
+                </label>
+                <label class="form_label">City
                 <input type="text" id="StationCity" class="form-control form-control-lg" placeholder="City" disabled>
+                </label>
+            <label class="form_label">Street
                 <input type="text" id="StationStreet" class="form-control form-control-lg" placeholder="Street" disabled>
+                </label>
             </div>
             <div class="col">
+            <label class="col-form-label form_label firstlabel">Latitude
                 <input type="text" id="StationLatitude" class="form-control form-control-lg" placeholder="Latitude" disabled>
+                </label>
+                <label class="col-form-label  form_label">Longtitude
                 <input type="text" id="StationLongtitude" class="form-control form-control-lg" placeholder="Longtitude" disabled>
+                </label>
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title text-muted">Smart Features</h5>
@@ -125,16 +140,17 @@
                         </div>
                     </div>
                 </div>
-
+                <label class="col-form-label  form_label input_row_after_checkbox">Comment
                 <input type="text" id="StationComment" class="form-control form-control-lg" placeholder="Comment" disabled>
+                </label>
             </div>
         </div>
         <div class="form-row">
             <div class="col">
-                <button type="button" class="btn btn-warning btn-lg btn-block">Cancel</button>
+                        <button type="button" class="btn btn-primary btn-block btn-lg">Save Station</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-primary btn-block btn-lg">Save Station</button>
+                    <button type="button" class="btn btn-warning btn-lg btn-block">Cancel</button>
             </div>
 
         </div>

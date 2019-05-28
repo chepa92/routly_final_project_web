@@ -97,10 +97,25 @@ main{
     height: 100%;
 }
 
+.form-row label {
+    margin-top: 15px;
+    text-align: center;
+    display: block;
+} 
+#main_station_info .form-row button {
+    margin-top: 28px;
+    text-align: center;
+    display: block;
+} 
+
 #main_station_info .form-control{
-    margin: 30px 0px;
+    margin: 2px 0px;
 }
 
+
+#main_add_station .form-control{
+    margin: 30px 0px;
+}
 
 /* always on bottom to overide settings */
 @media only screen and (max-width: 600px) {
