@@ -27,26 +27,26 @@
             <img class="d-flex" src="images/PAmit.png" width="60" alt="">
         </nav>
 
-        <nav class="navbar navbar-expand-lg navbar-light navbar-second">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-second navhover">
             <span class="navbar-toggler navbar-text-current">Station Info</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <ul class="nav collapse navbar-collapse nav-justified" id="navbarNav">
                 <li class="nav-item nav-link">
-                    <a class="nav-link text-white font-weight-bold" href="#">My Dashboard</a>
+                    <a class="nav-link  font-weight-bold" href="#">My Dashboard</a>
                 </li>
                 <li class="nav-item nav-link selected current font-weight-bold">
                     <a class="nav-link active" href="index.html">Station<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link">
-                    <a class="nav-link text-white font-weight-bold" href="#">Drivers</a>
+                    <a class="nav-link  font-weight-bold" href="#">Drivers</a>
                 </li>
                 <li class="nav-item nav-link">
-                    <a class="nav-link text-white font-weight-bold" href="#">Schedule</a>
+                    <a class="nav-link  font-weight-bold" href="#">Schedule</a>
                 </li>
                 <li class="nav-item nav-link">
-                    <a class="nav-link text-white font-weight-bold" href="#">Billing</a>
+                    <a class="nav-link font-weight-bold" href="#">Billing</a>
                 </li>
             </ul>
         </nav>
