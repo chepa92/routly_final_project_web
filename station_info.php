@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>json</title>
+    <title>Station info</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -110,29 +110,32 @@
                         <h5 class="card-title text-muted">Smart Features</h5>
                         <div class="form-row">
                             <div class="col">
-                                <div class="form-check">
-                                    <input class="form-check-input" name="Smart" type="checkbox" value="Interative map" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
+                            <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" name="Smart" type="checkbox"
+                                        value="Interative map" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1">
                                         Interative map
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="Smart" type="checkbox" value="Conditioner" id="defaultCheck2">
-                                    <label class="form-check-label" for="defaultCheck2">
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" name="Smart" type="checkbox" value="Conditioner"
+                                        id="customCheck2">
+                                    <label class="custom-control-label" for="customCheck2">
                                         Conditioner
                                     </label>
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="form-check">
-                                    <input class="form-check-input" name="Smart" type="checkbox" value="Light" id="defaultCheck3">
-                                    <label class="form-check-label" for="defaultCheck3">
-                                        Light
-                                    </label>
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" name="Smart" type="checkbox" value="Light"
+                                        id="customCheck3">
+                                    <label class="custom-control-label" for="customCheck3">
+                                        Light </label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="Smart" type="checkbox" value="Wi-fi" id="defaultCheck4">
-                                    <label class="form-check-label" for="defaultCheck4">
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" name="Smart" type="checkbox" value="Light"
+                                        id="customCheck4">
+                                    <label class="custom-control-label" for="customCheck4">
                                         Wi-fi
                                     </label>
                                 </div>
