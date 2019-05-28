@@ -40,7 +40,7 @@ $(document).ready(function () {
 
     var json_data = []
     $.getJSON("data/MOCK_DATA.json", function (data) {
-        var flag=0, district;
+        var flag=0;
         json_data = data
         for (var row of data) {
             var table_row = $(
@@ -59,6 +59,7 @@ $(document).ready(function () {
                 children = District.childNodes
                 for (var i = 3; i < children.length; i++) {
                    var option= children[i];
+                   var district = option.textContent;
                    if(district==row.District)
                                flag=1;
                 }
@@ -67,9 +68,10 @@ $(document).ready(function () {
             var optionDist = $(
                 '<option>' + row.District + '</option>'
             )
+            }
             $('#District').append(optionDist)
             $('tbody').append(table_row)
-            }
+            
             flag=0;
 
 
@@ -87,9 +89,10 @@ $(document).ready(function () {
             var optionCity = $(
                 '<option>' + row.City + '</option>'
             )
+            }
             $('#City').append(optionCity)
             $('tbody').append(table_row)
-            }
+            
             flag=0;
         }
 
