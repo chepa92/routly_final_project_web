@@ -26,18 +26,26 @@ $(document).ready(function () {
             if (json_data[i].StationId == stationID){
                 $('#StationID').attr('value', json_data[i].StationId)
                 $('#StationName').attr('value', json_data[i].StationName)
-                $('#District').attr('value', json_data[i].District)
-                $('#City').attr('value', json_data[i].City)
-                $('#Street').attr('value', json_data[i].Street)
-                $('#Latitude').attr('value', json_data[i].Latitude)
-                $('#Longitude').attr('value', json_data[i].Longitude)
-                $('#Comment').attr('value', json_data[i].Comment)
-                $('#Smart.Wifi').attr('value', json_data[i].Smart.Wifi)
-                $('#Smart.SmartScreen').attr('value', json_data[i].Smart.SmartScreen)
-                $('#Smart.Conditioner').attr('value', json_data[i].Smart.Conditioner)
-                $('#Smart.Light').attr('value', json_data[i].Smart.Light)
-                $('#Comment').attr('value', json_data[i].Comment)
+                $('#StationDistrict').attr('value', json_data[i].District)
+                $('#StationCity').attr('value', json_data[i].City)
+                $('#StationStreet').attr('value', json_data[i].Street)
+                $('#StationLatitude').attr('value', json_data[i].Latitude)
+                $('#StationLongtitude').attr('value', json_data[i].Longitude)
+                $('#StationComment').attr('value', json_data[i].Comment)
 
+                if (json_data[i].Smart.SmartScreen == 'True')
+                    $('input[name=Smart1').prop('checked', true)
+
+                if (json_data[i].Smart.Conditioner == 'True')
+                    $('input[name=Smart2').prop('checked', true)
+
+                if (json_data[i].Smart.Light == 'True')
+                    $('input[name=Smart3').prop('checked', true)
+
+                if (json_data[i].Smart.Wifi == 'True')
+                    $('input[name=Smart4').prop('checked', true)
+
+                
                 break;
             }
         }
@@ -63,7 +71,6 @@ $(document).ready(function () {
                 '</tr>'
             )
             
-<<<<<<< HEAD
             children = District.childNodes
             for (var i = 3; i < children.length; i++) {
                var option= children[i]
@@ -98,46 +105,6 @@ $(document).ready(function () {
         )
         $('#City').append(optionCity)
         $('tbody').append(table_row)
-=======
-                children = District.childNodes
-                for (var i = 3; i < children.length; i++) {
-                   var option= children[i];
-                   var district = option.textContent;
-                   if(district==row.District)
-                               flag=1;
-                }
-            if(flag==0)
-            {
-            var optionDist = $(
-                '<option>' + row.District + '</option>'
-            )
-            }
-            $('#District').append(optionDist)
-            $('tbody').append(table_row)
-            
-            flag=0;
-
-
-
-            children = City.childNodes
-                for (var i = 3; i < children.length; i++) {
-                   var option= children[i]
-                   var city = option.textContent;
-                   if(city==row.City)
-                               flag=1;
-                }
-                
-            if(flag==0)
-            {
-            var optionCity = $(
-                '<option>' + row.City + '</option>'
-            )
-            }
-            $('#City').append(optionCity)
-            $('tbody').append(table_row)
-            
-            flag=0;
->>>>>>> small bug fix javascript
         }
         flag=0;
     }
