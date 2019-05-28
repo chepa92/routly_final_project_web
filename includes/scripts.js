@@ -40,7 +40,7 @@ $(document).ready(function () {
 
     var json_data = []
     $.getJSON("data/MOCK_DATA.json", function (data) {
-        var flag=0;
+        var flag=0, district;
         json_data = data
         for (var row of data) {
             var table_row = $(
