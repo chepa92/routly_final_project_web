@@ -1,7 +1,15 @@
 * {
     font-family:'ABeeZee',sans-serif
     }
-    
+    .btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.22857;
+    }
     .navbar-top {
     background-color:#d9f3d2
     }
