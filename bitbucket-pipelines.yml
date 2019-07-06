@@ -17,6 +17,6 @@ pipelines:
               SERVER: 'routly.chepa.net'
               REMOTE_PATH: '/var/www/html/'
               LOCAL_PATH: 'build'
-              SSH_KEY: $MY_SSH_KEY
+              SSH_KEY: 'a15a24y05y24'
               DEBUG: 'true'
               EXTRA_ARGS: '-o ServerAliveInterval=10'
