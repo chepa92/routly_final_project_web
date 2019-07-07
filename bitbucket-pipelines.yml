@@ -1,30 +1,9 @@
-# Installation ---
-# 1. In Bitbucket, add $FTP_USERNAME $FTP_PASSWORD and $FTP_HOST as environment variables.
-# 2. Commit this file to your repo
-# 3. From Bitbucket Cloud > Commits > Commit Number > Run Pipeline > Custom:Init (this will
-#    push everything and initial GitFTP)
-#
-# Usage ---
-# - On each commit to master branch, it'll push all files to the $FTP_HOST
-# - You also have the option to 'init' (from Bitbucket Cloud) - pushes everything and initialises
-# - Finally you can also 'deploy-all' (from Bitbucket Cloud) - if multiple deploys fail, you
-#   can deploy everything to "catch up"
-#
-image: madshansen/docker-git-ftp:latest
+image: php:5.6.31
 
 pipelines:
-  custom: # Pipelines that are triggered manually via the Bitbucket GUI
-    init: # -- First time init
+  default:
     - step:
         script:
-          - sftp -b deploy.sh $FTP_USERNAME:FTP_PASSWORD@$FTP_HOST:/var/www/html
-    deploy-all: # -- Deploys all files from the selected commit
-    - step:
-         script:
-          - sftp -b deploy.sh $FTP_USERNAME:FTP_PASSWORD@$FTP_HOST:/var/www/html
-  branches: # Automated triggers on commits to branches
-    master: # -- When committing to master branch
-    - step:
-        deployment: production
-        script:
-          - sftp -b deploy.sh $FTP_USERNAME@$FTP_HOST:/var/www/html
+          - apt-get update
+          - apt-get -qq install git-ftp
+          - git ftp init --user $SFTP_username --passwd $SFTP_password sftp://$FTP_HOST/var/www/html/
