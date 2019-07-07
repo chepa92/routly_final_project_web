@@ -1,4 +1,4 @@
-image: php:7.0.27
+image: samueldebruyn/debian-git
 
 pipelines:
   default:
