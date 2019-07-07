@@ -1,8 +1,9 @@
-image: php:5.6.31
+image: php:7.0.27
 
 pipelines:
   default:
     - step:
         script:
+          - apt-get update
           - apt-get -qq install git-ftp
-          - git ftp init --user $SFTP_username --passwd $SFTP_password sftp://$FTP_HOST/var/www/html/
+          - git ftp push --user $SFTP_username --passwd $SFTP_password --verbose sftp://FTP_HOST/var/www/html
