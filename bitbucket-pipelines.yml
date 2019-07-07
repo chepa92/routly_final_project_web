@@ -16,27 +16,15 @@ pipelines:
   custom: # Pipelines that are triggered manually via the Bitbucket GUI
     init: # -- First time init
     - step:
-        caches:
-          - node
-          - composer
         script:
-          - npm install
-          - git ftp init -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST
+          - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD sftp://$FTP_HOST --remote-root $FTP_PATH
     deploy-all: # -- Deploys all files from the selected commit
     - step:
-        caches:
-          - node
-          - composer
-        script:
-          - npm install
-          - git ftp push -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST --all
+         script:
+          - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD sftp://$FTP_HOST --remote-root $FTP_PATH
   branches: # Automated triggers on commits to branches
     master: # -- When committing to master branch
     - step:
         deployment: production
-        caches:
-          - node
-          - composer
         script:
-          - npm install
-          - git ftp push -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST
+          - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD sftp://$FTP_HOST --remote-root $FTP_PATH
