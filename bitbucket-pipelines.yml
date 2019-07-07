@@ -4,6 +4,6 @@ pipelines:
   default:
     - step:
         script:
-          - apt-get update || true && apt-get install -y zip
+          - apt-get update || true
           - apt-get -qq install git-ftp
-          - git ftp push --user $SFTP_username --passwd $SFTP_password --verbose sftp://FTP_HOST/var/www/html
+          - git ftp push --user $SFTP_username --passwd $SFTP_password --verbose sftp://104.248.251.23/var/www/html
