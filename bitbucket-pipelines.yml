@@ -17,14 +17,14 @@ pipelines:
     init: # -- First time init
     - step:
         script:
-          - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD sftp://$FTP_HOST --remote-root $FTP_PATH
+          - sftp -b deploy.sh $FTP_USERNAME:FTP_PASSWORD@$FTP_HOST:/var/www/html
     deploy-all: # -- Deploys all files from the selected commit
     - step:
          script:
-          - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD sftp://$FTP_HOST --remote-root $FTP_PATH
+          - sftp -b deploy.sh $FTP_USERNAME:FTP_PASSWORD@$FTP_HOST:/var/www/html
   branches: # Automated triggers on commits to branches
     master: # -- When committing to master branch
     - step:
         deployment: production
         script:
-          - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD sftp://$FTP_HOST --remote-root $FTP_PATH
+          - sftp -b deploy.sh $FTP_USERNAME@$FTP_HOST:/var/www/html
