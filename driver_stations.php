@@ -7,11 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
@@ -30,8 +28,7 @@
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light navbar-second navhover">
             <span class="navbar-toggler navbar-text-current">Station List</span>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <ul class="nav collapse navbar-collapse nav-justified" id="navbarNav">
@@ -39,8 +36,7 @@
                     <a class="nav-link font-weight-bold" href="#">My Dashboard</a>
                 </li>
                 <li class="nav-item nav-link selected current">
-                    <a class="nav-link active font-weight-bold" href="index.html">Station<span
-                            class="sr-only">(current)</span></a>
+                    <a class="nav-link active font-weight-bold" href="index.html">Station<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link">
                     <a class="nav-link font-weight-bold" href="#">Drivers</a>
@@ -60,8 +56,7 @@
                     <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item nav-link crumb disabled">
-                    <a class="nav-link active font-weight-bold text-secondary" href="index.html">List<span
-                            class="sr-only">(current)</span></a>
+                    <a class="nav-link active font-weight-bold text-secondary" href="index.html">List<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link disabled">
                     <a class="nav-link" href="#"></a>
@@ -80,8 +75,7 @@
     <main>
         <div class="form-row">
             <div class="col-4">
-                <input type="text" id="table-search" class="form-control form-control-lg d-none d-sm-block d-sm-none"
-                    placeholder="Search">
+                <input type="text" id="table-search" class="form-control form-control-lg d-none d-sm-block d-sm-none" placeholder="Search">
             </div>
             <div class="col-2">
                 <select class="form-control form-control-lg" name="District" id="District">
@@ -123,6 +117,25 @@
 
     </main>
 
-    <footer></footer>
+    <footer>
+
+        <?php
+        $dbhost = "routly.chepa.net";
+        $dbuser = "routly";
+        $dbpass = "12211221";
+        $dbname = "routly";
+
+        // Create connection
+        $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+
+        // Check connection
+        if (mysqli_connect_errno()) {
+            die("DB Connection failed: " . mysqli_connect_error() . " (" . mysqli_connect_errno() . ")");
+        }
+        echo "Connected";
+        ?>
+
+
+    </footer>
     <script src="./includes/scripts.js"></script>
 </body>
