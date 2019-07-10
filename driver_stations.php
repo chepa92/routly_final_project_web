@@ -129,12 +129,8 @@ include 'db.php';
                                       <td>" . $row["street"] . "</td>
                                       <td>" . $row["comment"] . "</td>
                                       <td><a href='/station_info.php?stationID=" . $row["id"] . "'>ChangeThis</a></td>
-
                                   </tr>";
                         }
-                        echo "</table>";
-                    } else {
-                        echo "0 results";
                     }
                     $connection->close();
                     ?>

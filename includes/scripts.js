@@ -24,7 +24,7 @@ $(document).ready(function () {
         for (i = 0; i < json_data.length; ++i) {
             if (json_data[i].StationId == stationID) {
                 $('#StationID').attr('value', json_data[i].StationId)
-                $('#StationName').attr('value', json_data[i].StationName)
+                $('#StationName').attr('value', name)
                 $('#District').attr('value', json_data[i].District)
                 $('#City').attr('value', json_data[i].City)
                 $('#Street').attr('value', json_data[i].Street)

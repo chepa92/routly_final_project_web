@@ -1,5 +1,9 @@
 <?php
 include 'db.php';
+
+$query = "SELECT * FROM stations WHERE id=" . $_GET["stationID"];
+$result = mysqli_query($connection, $query);
+$row = $result->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -78,46 +82,45 @@ include 'db.php';
     </header>
 
     <main id="main_station_info">
-
         <div class="form-row">
             <div class="col mr-5">
                 <div class="form-group">
                     <label for="StationID">Station ID</label>
-                    <input type="text" id="StationID" class="form-control form-control-lg" placeholder="Station ID" disabled>
+                    <input type="text" id="StationID" class="form-control form-control-lg" placeholder='<?php echo $row["id"];?>' disabled>
                 </div>
 
                 <div class="form-group">
                     <label for="StationName">Station Name</label>
-                    <input type="text" id="StationName" class="form-control form-control-lg" placeholder="Station Name" disabled>
+                    <input type="text" id="StationName" class="form-control form-control-lg" placeholder='<?php echo $row["name"];?>' disabled>
                 </div>
 
                 <div class="form-group">
                     <label for="District">District</label>
-                    <input type="text" id="District" class="form-control form-control-lg" placeholder="District" disabled>
+                    <input type="text" id="District" class="form-control form-control-lg" placeholder='<?php echo $row["district"];?>' disabled>
                 </div>
 
                 <div class="form-group">
                     <label for="City">City</label>
-                    <input type="text" id="City" class="form-control form-control-lg" placeholder="City" disabled>
+                    <input type="text" id="City" class="form-control form-control-lg" placeholder='<?php echo $row["city"];?>' disabled>
                 </div>
 
                 <div class="form-group">
                     <label for="Street">Street</label>
-                    <input type="text" id="Street" class="form-control form-control-lg" placeholder="Street" disabled>
+                    <input type="text" id="Street" class="form-control form-control-lg" placeholder='<?php echo $row["street"];?>' disabled>
                 </div>
             </div>
             <div class="col">
                 <div class="form-group">
                     <label for="Latitude">Latitude</label>
-                    <input type="text" id="Latitude" class="form-control form-control-lg" placeholder="Latitude" disabled>
+                    <input type="text" id="Latitude" class="form-control form-control-lg" placeholder='<?php echo $row["latitude"];?>' disabled>
                 </div>
                 <div class="form-group">
                     <label for="Longitude">Longitude</label>
-                    <input type="text" id="Longitude" class="form-control form-control-lg" placeholder="Longitude" disabled>
+                    <input type="text" id="Longitude" class="form-control form-control-lg" placeholder='<?php echo $row["longtitude"];?>' disabled>
                 </div>
                 <div class="form-group">
                     <label for="Comment">Comment</label>
-                    <input type="text" id="Comment" class="form-control form-control-lg" placeholder="Comment" disabled>
+                    <input type="text" id="Comment" class="form-control form-control-lg" placeholder='<?php echo $row["comment"];?>' disabled>
                 </div>
                 <div class="form-group">
                     <label for="Longitude">Smart Features</label>
@@ -126,19 +129,19 @@ include 'db.php';
                             <div class="form-row">
                                 <div class="col">
                                     <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart1" type="checkbox" value="SmartScreen" id="customCheck1" disabled>
+                                        <input class="custom-control-input" name="Smart1" type="checkbox" value="SmartScreen" id="customCheck1" disabled <?php echo $row["map"] ? "checked" : ""?>>
                                         <label class="custom-control-label" for="customCheck1">Interative map</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart2" type="checkbox" value="Conditioner" id="customCheck2" disabled>
+                                        <input class="custom-control-input" name="Smart2" type="checkbox" value="Conditioner" id="customCheck2" disabled <?php echo $row["conditioner"] ? "checked" : ""?>>
                                         <label class="custom-control-label" for="customCheck2">Conditioner</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart3" type="checkbox" value="Light" id="customCheck3" disabled>
+                                        <input class="custom-control-input" name="Smart3" type="checkbox" value="Light" id="customCheck3" disabled <?php echo $row["light"] ? "checked" : ""?>>
                                         <label class="custom-control-label" for="customCheck3">Light </label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart4" type="checkbox" value="Wifi" id="customCheck4" disabled>
+                                        <input class="custom-control-input" name="Smart4" type="checkbox" value="Wifi" id="customCheck4" disabled <?php echo $row["wifi"] ? "checked" : ""?>>
                                         <label class="custom-control-label" for="customCheck4">Wi-fi</label>
                                     </div>
                                 </div>
@@ -148,6 +151,7 @@ include 'db.php';
                 </div>
             </div>
         </div>
+
         <div class="form-row mt-3">
             <div class="col mr-5 mb-4">
                 <a class="btn btn-danger btn-lg btn-block" href="#" role="button">Delete Station</a>
@@ -159,4 +163,7 @@ include 'db.php';
     </main>
     <footer></footer>
     <script src="./includes/scripts.js"></script>
+    <?php
+    $connection->close();
+    ?>
 </body>
