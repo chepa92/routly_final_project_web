@@ -1,3 +1,7 @@
+<?php
+include 'db.php';
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -96,6 +100,7 @@
                 <a class="btn btn-success btn-block btn-lg" href="add_station.html" role="button">Add New Station</a>
             </div>
         </div>
+
         <form action="station_info.php" method="get">
             <table id="table" class="table table-striped table-bordered mt-4 table-hover">
                 <thead class="table-success">
@@ -105,37 +110,39 @@
                         <th scope="col">District</th>
                         <th id="cityName" scope="col">City</th>
                         <th scope="col">Street</th>
-                        <th scope="col">Smart</th>
                         <th scope="col">Comment</th>
                         <th scope="col">Info</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                    $query = "SELECT * FROM stations";
+                    $result = mysqli_query($connection, $query);
+
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<tr><td>" . $row["id"] . "</td>
+                                      <td>" . $row["name"] . "</td>
+                                      <td>" . $row["district"] . "</td>
+                                      <td>" . $row["city"] . "</td>
+                                      <td>" . $row["street"] . "</td>
+                                      <td>" . $row["comment"] . "</td>
+                                      <td><a href='/station_info.php?stationID=" . $row["id"] . "'>ChangeThis</a></td>
+
+                                  </tr>";
+                        }
+                        echo "</table>";
+                    } else {
+                        echo "0 results";
+                    }
+                    $connection->close();
+                    ?>
                 </tbody>
             </table>
         </form>
-
     </main>
 
-    <footer>
-
-        <?php
-        $dbhost = "routly.chepa.net";
-        $dbuser = "routly";
-        $dbpass = "12211221";
-        $dbname = "routly";
-
-        // Create connection
-        $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-
-        // Check connection
-        if (mysqli_connect_errno()) {
-            die("DB Connection failed: " . mysqli_connect_error() . " (" . mysqli_connect_errno() . ")");
-        }
-        echo "Connected";
-        ?>
-
-
-    </footer>
+    <footer></footer>
     <script src="./includes/scripts.js"></script>
 </body>
