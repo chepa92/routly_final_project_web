@@ -16,6 +16,19 @@ $(document).ready(function () {
 
     let stationID = findGetParameter('stationID');
 
+
+//edit station button, enables all inputs and change buttons
+    $('.editStation').click(function() {
+        $('input').each(function() {
+            if ($(this).attr('disabled')) {
+                $(this).removeAttr('disabled');
+            } 
+        });
+        $(".card-body").css("background-color", "white");
+        $(".editStation").remove(); 
+        var saveButton = '<button type="submit" class="btn btn-primary btn-block btn-lg">Save Station</button>';
+        $(".col_of_button").append(saveButton);
+    });
 });
 
 //deleting station from DB by sending id to delete.php
@@ -31,3 +44,20 @@ function deleteStation(id) {
     xhttp.open("GET", "delete.php?id=" + id, true);
     xhttp.send();
 }
+
+function updateStation(id) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(id) {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("response").innerHTML = this.responseText;
+            setTimeout(function(){ }, 1500);
+            window.location.replace("/driver_stations.php");
+        }
+    };
+    xhttp.open("GET", "update.php?id=" + id, true);
+    xhttp.send();
+}
+
+
+
+    

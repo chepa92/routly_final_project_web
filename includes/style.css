@@ -57,7 +57,7 @@
     margin-top: 8px;
     margin-left: -10px;
     border-color: #62c462 transparent transparent;
-    z-index: 999
+    z-index: 9999;
 }
 
 main {
@@ -124,7 +124,7 @@ main {
     transition: transform .2s ease, -webkit-transform .2s ease;
 }
 
-.navbar-third{
+.navbar-third {
     z-index: 999;
     background-color: white;
 }

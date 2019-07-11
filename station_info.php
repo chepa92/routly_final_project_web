@@ -84,67 +84,69 @@ $row = $result->fetch_assoc();
     </header>
 
     <main id="main_station_info">
-        <div class="form-row">
-            <div class="col mr-5">
-                <div class="form-group">
-                    <label for="StationID">Station ID</label>
-                    <input type="text" id="StationID" class="form-control form-control-lg" placeholder='<?php echo $row["id"]; ?>' disabled>
-                </div>
+        <form action="update.php" method="get">
+            <div class="form-row">
+                <div class="col mr-5">
+                    <div class="form-group">
+                        <label for="StationID">Station ID</label>
+                        <input type="text" id="StationID" class="form-control form-control-lg" name="StationId" value='<?php echo $row["id"]; ?>' autofocus pattern="[0-9]+" disabled>
+                    </div>
 
-                <div class="form-group">
-                    <label for="StationName">Station Name</label>
-                    <input type="text" id="StationName" class="form-control form-control-lg" placeholder='<?php echo $row["name"]; ?>' disabled>
-                </div>
+                    <div class="form-group">
+                        <label for="StationName">Station Name</label>
+                        <input type="text" id="StationName" class="form-control form-control-lg" name="StationName" value='<?php echo $row["name"]; ?>' disabled>
+                    </div>
 
-                <div class="form-group">
-                    <label for="District">District</label>
-                    <input type="text" id="District" class="form-control form-control-lg" placeholder='<?php echo $row["district"]; ?>' disabled>
-                </div>
+                    <div class="form-group">
+                        <label for="District">District</label>
+                        <input type="text" id="District" class="form-control form-control-lg" name="District" value='<?php echo $row["district"]; ?>' disabled>
+                    </div>
 
-                <div class="form-group">
-                    <label for="City">City</label>
-                    <input type="text" id="City" class="form-control form-control-lg" placeholder='<?php echo $row["city"]; ?>' disabled>
-                </div>
+                    <div class="form-group">
+                        <label for="City">City</label>
+                        <input type="text" id="City" class="form-control form-control-lg" name="City" value='<?php echo $row["city"]; ?>' disabled>
+                    </div>
 
-                <div class="form-group">
-                    <label for="Street">Street</label>
-                    <input type="text" id="Street" class="form-control form-control-lg" placeholder='<?php echo $row["street"]; ?>' disabled>
+                    <div class="form-group">
+                        <label for="Street">Street</label>
+                        <input type="text" id="Street" class="form-control form-control-lg" name="Street" value='<?php echo $row["street"]; ?>' disabled>
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <label for="Latitude">Latitude</label>
-                    <input type="text" id="Latitude" class="form-control form-control-lg" placeholder='<?php echo $row["latitude"]; ?>' disabled>
-                </div>
-                <div class="form-group">
-                    <label for="Longitude">Longitude</label>
-                    <input type="text" id="Longitude" class="form-control form-control-lg" placeholder='<?php echo $row["longtitude"]; ?>' disabled>
-                </div>
-                <div class="form-group">
-                    <label for="Comment">Comment</label>
-                    <input type="text" id="Comment" class="form-control form-control-lg" placeholder='<?php echo $row["comment"]; ?>' disabled>
-                </div>
-                <div class="form-group">
-                    <label for="Longitude">Smart Features</label>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="form-row">
-                                <div class="col">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart1" type="checkbox" value="SmartScreen" id="customCheck1" disabled <?php echo $row["map"] ? "checked" : "" ?>>
-                                        <label class="custom-control-label" for="customCheck1">Interative map</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart2" type="checkbox" value="Conditioner" id="customCheck2" disabled <?php echo $row["conditioner"] ? "checked" : "" ?>>
-                                        <label class="custom-control-label" for="customCheck2">Conditioner</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart3" type="checkbox" value="Light" id="customCheck3" disabled <?php echo $row["light"] ? "checked" : "" ?>>
-                                        <label class="custom-control-label" for="customCheck3">Light </label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart4" type="checkbox" value="Wifi" id="customCheck4" disabled <?php echo $row["wifi"] ? "checked" : "" ?>>
-                                        <label class="custom-control-label" for="customCheck4">Wi-fi</label>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="Latitude">Latitude</label>
+                        <input type="text" id="Latitude" class="form-control form-control-lg" name="Latitude" value='<?php echo $row["latitude"]; ?>' disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="Longitude">Longitude</label>
+                        <input type="text" id="Longitude" class="form-control form-control-lg" name="Longitude" value='<?php echo $row["longtitude"]; ?>' disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="Comment">Comment</label>
+                        <input type="text" id="Comment" class="form-control form-control-lg" name="Comment" value='<?php echo $row["comment"]; ?>' disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="Longitude">Smart Features</label>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" name="Screen" type="checkbox" id="customCheck1" disabled <?php echo $row["map"] ? "checked" : "" ?>>
+                                            <label class="custom-control-label" for="customCheck1">Interative map</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" name="Conditioner" type="checkbox" id="customCheck2" disabled <?php echo $row["conditioner"] ? "checked" : "" ?>>
+                                            <label class="custom-control-label" for="customCheck2">Conditioner</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" name="Light" type="checkbox" id="customCheck3" disabled <?php echo $row["light"] ? "checked" : "" ?>>
+                                            <label class="custom-control-label" for="customCheck3">Light </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" name="Wifi" type="checkbox" id="customCheck4" disabled <?php echo $row["wifi"] ? "checked" : "" ?>>
+                                            <label class="custom-control-label" for="customCheck4">Wi-fi</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -152,39 +154,40 @@ $row = $result->fetch_assoc();
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="form-row mt-3">
-            <div class="col mr-5 mb-4">
-                <button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="modal" data-target="#deleteModal">Delete Station</button>
+            <div class="form-row mt-3">
+                <div class="col mr-5 mb-4">
+                    <button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="modal" data-target="#deleteModal">Delete Station</button>
+                </div>
+                <div class="col col_of_button">
+                    <input type="hidden" id="oldID" name="oldID" value=<?php echo $_GET["stationID"] ?>>
+                    <button type="button" name="stationID" class="btn btn-warning btn-block btn-lg editStation">Edit Station</button>
+                </div>
             </div>
-            <div class="col">
-                <button type="button" name="stationID" class="btn btn-primary btn-block btn-lg">Edit Station</button>
-            </div>
-        </div>
+        </form>
     </main>
     <footer></footer>
 
     <!-- modals -->
-        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="deleteModal">Warning!</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body" id="response">
-                        <h6>Are you sure you want to delete this station?</h6>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">No, thanks</button>
-                        <button type="button" class="btn btn-danger" onclick="deleteStation('<?php echo $_GET["stationID"] ?>')">Yes, Delete Station</button>
-                    </div>
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModal">Warning!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="response">
+                    <h6>Are you sure you want to delete this station?</h6>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">No, thanks</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteStation('<?php echo $_GET["stationID"] ?>')">Yes, Delete Station</button>
                 </div>
             </div>
         </div>
+    </div>
     <!-- modals -->
     <script src="./includes/scripts.js"></script>
     <script type="text/javascript" src="./includes/logo.js"></script>
