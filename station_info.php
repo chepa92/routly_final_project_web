@@ -28,7 +28,9 @@ $row = $result->fetch_assoc();
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
             <a class="navbar-brand mr-auto p-2" href="index.html">
-                <img src="images/logo.png" width="160" alt="">
+                <div style="float: left; " id="top-logo" class="logo hide-and-seek-animals" data-image="./images/doge.png">
+                    <img src="./images/logo.png" width="160" alt="logo" class="logo__img hide-and-seek-animals__logo">
+                </div>
             </a>
             <a class="material-icons navbar-brand p-2 icon" href="#">notifications</a>
             <a class="material-icons navbar-brand p-2 icon" href="#">settings</a>
@@ -59,7 +61,7 @@ $row = $result->fetch_assoc();
             </ul>
         </nav>
 
-        <nav class="navbar navbar-expand-lg navbar-light py-0">
+        <nav class="navbar navbar-expand-lg navbar-light py-0 navbar-third">
             <ul class="nav collapse navbar-collapse nav-justified d-none d-sm-block d-sm-none" id="navbarNav2">
                 <li class="nav-item nav-link disabled">
                     <a class="nav-link" href="#"></a>
@@ -86,41 +88,41 @@ $row = $result->fetch_assoc();
             <div class="col mr-5">
                 <div class="form-group">
                     <label for="StationID">Station ID</label>
-                    <input type="text" id="StationID" class="form-control form-control-lg" placeholder='<?php echo $row["id"];?>' disabled>
+                    <input type="text" id="StationID" class="form-control form-control-lg" placeholder='<?php echo $row["id"]; ?>' disabled>
                 </div>
 
                 <div class="form-group">
                     <label for="StationName">Station Name</label>
-                    <input type="text" id="StationName" class="form-control form-control-lg" placeholder='<?php echo $row["name"];?>' disabled>
+                    <input type="text" id="StationName" class="form-control form-control-lg" placeholder='<?php echo $row["name"]; ?>' disabled>
                 </div>
 
                 <div class="form-group">
                     <label for="District">District</label>
-                    <input type="text" id="District" class="form-control form-control-lg" placeholder='<?php echo $row["district"];?>' disabled>
+                    <input type="text" id="District" class="form-control form-control-lg" placeholder='<?php echo $row["district"]; ?>' disabled>
                 </div>
 
                 <div class="form-group">
                     <label for="City">City</label>
-                    <input type="text" id="City" class="form-control form-control-lg" placeholder='<?php echo $row["city"];?>' disabled>
+                    <input type="text" id="City" class="form-control form-control-lg" placeholder='<?php echo $row["city"]; ?>' disabled>
                 </div>
 
                 <div class="form-group">
                     <label for="Street">Street</label>
-                    <input type="text" id="Street" class="form-control form-control-lg" placeholder='<?php echo $row["street"];?>' disabled>
+                    <input type="text" id="Street" class="form-control form-control-lg" placeholder='<?php echo $row["street"]; ?>' disabled>
                 </div>
             </div>
             <div class="col">
                 <div class="form-group">
                     <label for="Latitude">Latitude</label>
-                    <input type="text" id="Latitude" class="form-control form-control-lg" placeholder='<?php echo $row["latitude"];?>' disabled>
+                    <input type="text" id="Latitude" class="form-control form-control-lg" placeholder='<?php echo $row["latitude"]; ?>' disabled>
                 </div>
                 <div class="form-group">
                     <label for="Longitude">Longitude</label>
-                    <input type="text" id="Longitude" class="form-control form-control-lg" placeholder='<?php echo $row["longtitude"];?>' disabled>
+                    <input type="text" id="Longitude" class="form-control form-control-lg" placeholder='<?php echo $row["longtitude"]; ?>' disabled>
                 </div>
                 <div class="form-group">
                     <label for="Comment">Comment</label>
-                    <input type="text" id="Comment" class="form-control form-control-lg" placeholder='<?php echo $row["comment"];?>' disabled>
+                    <input type="text" id="Comment" class="form-control form-control-lg" placeholder='<?php echo $row["comment"]; ?>' disabled>
                 </div>
                 <div class="form-group">
                     <label for="Longitude">Smart Features</label>
@@ -129,19 +131,19 @@ $row = $result->fetch_assoc();
                             <div class="form-row">
                                 <div class="col">
                                     <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart1" type="checkbox" value="SmartScreen" id="customCheck1" disabled <?php echo $row["map"] ? "checked" : ""?>>
+                                        <input class="custom-control-input" name="Smart1" type="checkbox" value="SmartScreen" id="customCheck1" disabled <?php echo $row["map"] ? "checked" : "" ?>>
                                         <label class="custom-control-label" for="customCheck1">Interative map</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart2" type="checkbox" value="Conditioner" id="customCheck2" disabled <?php echo $row["conditioner"] ? "checked" : ""?>>
+                                        <input class="custom-control-input" name="Smart2" type="checkbox" value="Conditioner" id="customCheck2" disabled <?php echo $row["conditioner"] ? "checked" : "" ?>>
                                         <label class="custom-control-label" for="customCheck2">Conditioner</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart3" type="checkbox" value="Light" id="customCheck3" disabled <?php echo $row["light"] ? "checked" : ""?>>
+                                        <input class="custom-control-input" name="Smart3" type="checkbox" value="Light" id="customCheck3" disabled <?php echo $row["light"] ? "checked" : "" ?>>
                                         <label class="custom-control-label" for="customCheck3">Light </label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" name="Smart4" type="checkbox" value="Wifi" id="customCheck4" disabled <?php echo $row["wifi"] ? "checked" : ""?>>
+                                        <input class="custom-control-input" name="Smart4" type="checkbox" value="Wifi" id="customCheck4" disabled <?php echo $row["wifi"] ? "checked" : "" ?>>
                                         <label class="custom-control-label" for="customCheck4">Wi-fi</label>
                                     </div>
                                 </div>
@@ -163,6 +165,7 @@ $row = $result->fetch_assoc();
     </main>
     <footer></footer>
     <script src="./includes/scripts.js"></script>
+    <script type="text/javascript" src="./includes/logo.js"></script>
     <?php
     $connection->close();
     ?>

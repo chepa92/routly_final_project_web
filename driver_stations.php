@@ -24,7 +24,9 @@ include 'db.php';
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
             <a class="navbar-brand mr-auto p-2" href="index.html">
-                <img src="images/logo.png" width="160" alt="">
+                <div style="float: left; " id="top-logo" class="logo hide-and-seek-animals" data-image="./images/doge.png">
+                    <img src="./images/logo.png" width="160" alt="logo" class="logo__img hide-and-seek-animals__logo">
+                </div>
             </a>
             <a class="material-icons navbar-brand p-2" href="#">notifications</a>
             <a class="material-icons navbar-brand p-2" href="#">settings</a>
@@ -54,7 +56,7 @@ include 'db.php';
             </ul>
         </nav>
 
-        <nav class="navbar navbar-expand-lg navbar-light py-0 d-none d-sm-block d-sm-none">
+        <nav class="navbar navbar-expand-lg navbar-light py-0 d-none d-sm-block d-sm-none navbar-third">
             <ul class="nav collapse navbar-collapse nav-justified" id="navbarNav2">
                 <li class="nav-item nav-link disabled">
                     <a class="nav-link" href="#"></a>
@@ -73,7 +75,6 @@ include 'db.php';
                 </li>
             </ul>
         </nav>
-
     </header>
 
     <main>
@@ -141,4 +142,5 @@ include 'db.php';
 
     <footer></footer>
     <script src="./includes/scripts.js"></script>
+    <script type="text/javascript" src="./includes/logo.js"></script>
 </body>

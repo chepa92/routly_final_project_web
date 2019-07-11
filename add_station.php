@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="./includes/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -22,7 +20,9 @@
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
             <a class="navbar-brand mr-auto p-2" href="index.html">
-                <img src="images/logo.png" width="160" alt="">
+                <div style="float: left; " id="top-logo" class="logo hide-and-seek-animals" data-image="./images/doge.png">
+                    <img src="./images/logo.png" width="160" alt="logo" class="logo__img hide-and-seek-animals__logo">
+                </div>
             </a>
             <a class="material-icons navbar-brand p-2 icon" href="#">notifications</a>
             <a class="material-icons navbar-brand p-2 icon" href="#">settings</a>
@@ -31,8 +31,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light navbar-second navhover">
             <span class="navbar-toggler navbar-text-current">Station Info</span>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <ul class="nav collapse navbar-collapse nav-justified" id="navbarNav">
@@ -54,14 +53,13 @@
             </ul>
         </nav>
 
-        <nav class="navbar navbar-expand-lg navbar-light py-0">
+        <nav class="navbar navbar-expand-lg navbar-light py-0 navbar-third">
             <ul class="nav collapse navbar-collapse nav-justified d-none d-sm-block d-sm-none" id="navbarNav2">
                 <li class="nav-item nav-link disabled">
                     <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item nav-link crumb disabled">
-                    <a class="nav-link active font-weight-bold text-secondary" href="index.html">Add Station<span
-                            class="sr-only">(current)</span></a>
+                    <a class="nav-link active font-weight-bold text-secondary" href="index.html">Add Station<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link disabled">
                     <a class="nav-link" href="#"></a>
@@ -82,12 +80,10 @@
             <div class="form-row pt-5">
                 <div class="col mr-5">
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-lg y-3" placeholder="Station ID"
-                            name="StationId" value="" autofocus pattern="[0-9]+">
+                        <input type="text" class="form-control form-control-lg y-3" placeholder="Station ID" name="StationId" value="" autofocus pattern="[0-9]+">
                     </div>
                     <div class="form-group pt-3">
-                        <input type="text" class="form-control form-control-lg" placeholder="Station Name"
-                            name="StationName" value="">
+                        <input type="text" class="form-control form-control-lg" placeholder="Station Name" name="StationName" value="">
                     </div>
                     <div class="form-group pt-3">
                         <select class="form-control form-control-lg" name="District" id="District">
@@ -100,22 +96,18 @@
                         </select>
                     </div>
                     <div class="form-group pt-3">
-                        <input type="text" class="form-control form-control-lg" placeholder="Street" name="Street"
-                            value="">
+                        <input type="text" class="form-control form-control-lg" placeholder="Street" name="Street" value="">
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-lg" placeholder="Latitude" name="Latitude"
-                            value="" pattern="-?\d{1,3}\.\d+">
+                        <input type="text" class="form-control form-control-lg" placeholder="Latitude" name="Latitude" value="" pattern="-?\d{1,3}\.\d+">
                     </div>
                     <div class="form-group pt-3">
-                        <input type="text" class="form-control form-control-lg" placeholder="Longtitude"
-                            name="Longitude" value="" pattern="-?\d{1,3}\.\d+">
+                        <input type="text" class="form-control form-control-lg" placeholder="Longtitude" name="Longitude" value="" pattern="-?\d{1,3}\.\d+">
                     </div>
                     <div class="form-group pt-3">
-                        <input type="text" class="form-control form-control-lg" placeholder="Comment" name="Comment"
-                            value="">
+                        <input type="text" class="form-control form-control-lg" placeholder="Comment" name="Comment" value="">
                     </div>
                     <div class="form-group">
                         <div class="card">
@@ -124,15 +116,13 @@
                                 <div class="form-row">
                                     <div class="col">
                                         <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" name="Smart.SmartScreen" type="checkbox"
-                                                value="Interative map" id="customCheck1">
+                                            <input class="custom-control-input" name="Smart.SmartScreen" type="checkbox" value="Interative map" id="customCheck1">
                                             <label class="custom-control-label" for="customCheck1">
                                                 Interative map
                                             </label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" name="Smart.Conditioner" type="checkbox"
-                                                value="Conditioner" id="customCheck2">
+                                            <input class="custom-control-input" name="Smart.Conditioner" type="checkbox" value="Conditioner" id="customCheck2">
                                             <label class="custom-control-label" for="customCheck2">
                                                 Conditioner
                                             </label>
@@ -140,14 +130,12 @@
                                     </div>
                                     <div class="col">
                                         <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" name="Smart.Light" type="checkbox"
-                                                value="Light" id="customCheck3">
+                                            <input class="custom-control-input" name="Smart.Light" type="checkbox" value="Light" id="customCheck3">
                                             <label class="custom-control-label" for="customCheck3">
                                                 Light </label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" name="Smart.Wifi" type="checkbox"
-                                                value="Light" id="customCheck4">
+                                            <input class="custom-control-input" name="Smart.Wifi" type="checkbox" value="Light" id="customCheck4">
                                             <label class="custom-control-label" for="customCheck4">
                                                 Wi-fi
                                             </label>
@@ -173,4 +161,5 @@
 
     <footer></footer>
     <script src="./includes/scripts.js"></script>
+    <script type="text/javascript" src="./includes/logo.js"></script>
 </body>
