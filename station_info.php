@@ -156,7 +156,7 @@ $row = $result->fetch_assoc();
 
         <div class="form-row mt-3">
             <div class="col mr-5 mb-4">
-                <a class="btn btn-danger btn-lg btn-block" href="#" role="button">Delete Station</a>
+                <button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="modal" data-target="#deleteModal">Delete Station</button>
             </div>
             <div class="col">
                 <button type="button" name="stationID" class="btn btn-primary btn-block btn-lg">Edit Station</button>
@@ -164,6 +164,28 @@ $row = $result->fetch_assoc();
         </div>
     </main>
     <footer></footer>
+
+    <!-- modals -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModal">Warning!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="response">
+                        <h6>Are you sure you want to delete this station?</h6>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">No, thanks</button>
+                        <button type="button" class="btn btn-danger" onclick="deleteStation('<?php echo $_GET["stationID"] ?>')">Yes, Delete Station</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- modals -->
     <script src="./includes/scripts.js"></script>
     <script type="text/javascript" src="./includes/logo.js"></script>
     <?php

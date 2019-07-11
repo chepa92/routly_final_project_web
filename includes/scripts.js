@@ -16,51 +16,18 @@ $(document).ready(function () {
 
     let stationID = findGetParameter('stationID');
 
-    var json_data = []
-    $.getJSON("data/MOCK_DATA.json", function (data) {
-        json_data = data
-
-        var i;
-        for (i = 0; i < json_data.length; ++i) {
-            if (json_data[i].StationId == stationID) {
-                $('#StationID').attr('value', json_data[i].StationId)
-                $('#StationName').attr('value', name)
-                $('#District').attr('value', json_data[i].District)
-                $('#City').attr('value', json_data[i].City)
-                $('#Street').attr('value', json_data[i].Street)
-                $('#Latitude').attr('value', json_data[i].Latitude)
-                $('#Longitude').attr('value', json_data[i].Longitude)
-                $('#Comment').attr('value', json_data[i].Comment)
-
-                if (json_data[i].Smart.SmartScreen == 'True')
-                    $('input[name=Smart1').prop('checked', true)
-                if (json_data[i].Smart.Conditioner == 'True')
-                    $('input[name=Smart2').prop('checked', true)
-                if (json_data[i].Smart.Light == 'True')
-                    $('input[name=Smart3').prop('checked', true)
-                if (json_data[i].Smart.Wifi == 'True')
-                    $('input[name=Smart4').prop('checked', true)
-                break;
-            }
-        }
-    });
-
-    $('#District').on('change', function (e) {
-        UpdateTable(e.target.value, '', 'District');
-    })
-
-    $('#City').on('change', function (e) {
-        UpdateTable(e.target.value, '', 'City');
-    })
-
-    $('#Smart').on('change', function (e) {
-        UpdateTable(e.target.value, '', 'Smart', 'Wifi');
-    })
-
-    var optionBool = $(
-        '<option>' + 'True' + '</option>' +
-        '<option>' + 'False' + '</option>'
-    )
-    $('#Smart').append(optionBool)
-
 });
+
+//deleting station from DB by sending id to delete.php
+function deleteStation(id) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(id) {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("response").innerHTML = this.responseText;
+            setTimeout(function(){ }, 1500);
+            window.location.replace("/driver_stations.php");
+        }
+    };
+    xhttp.open("GET", "delete.php?id=" + id, true);
+    xhttp.send();
+}
