@@ -5,7 +5,7 @@ $(function() {
             var i = $(t)
               , n = i.length;
             if (0 == n)
-                return void console.warn("Element " + t + " not found");
+                return void console.warn("Элемент " + t + " не найден");
             this.eachObj(i, n)
         },
         eachObj: function(t, i) {

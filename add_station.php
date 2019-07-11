@@ -76,7 +76,7 @@
     </header>
 
     <main id="main_station_info">
-        <form action="station_info.php" method="get">
+        <form action="insert.php" method="get">
             <div class="form-row pt-5">
                 <div class="col mr-5">
                     <div class="form-group">
@@ -116,13 +116,13 @@
                                 <div class="form-row">
                                     <div class="col">
                                         <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" name="Smart.SmartScreen" type="checkbox" value="Interative map" id="customCheck1">
+                                            <input class="custom-control-input" name="Screen" type="checkbox" id="customCheck1">
                                             <label class="custom-control-label" for="customCheck1">
                                                 Interative map
                                             </label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" name="Smart.Conditioner" type="checkbox" value="Conditioner" id="customCheck2">
+                                            <input class="custom-control-input" name="Conditioner" type="checkbox" id="customCheck2">
                                             <label class="custom-control-label" for="customCheck2">
                                                 Conditioner
                                             </label>
@@ -130,12 +130,12 @@
                                     </div>
                                     <div class="col">
                                         <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" name="Smart.Light" type="checkbox" value="Light" id="customCheck3">
+                                            <input class="custom-control-input" name="Light" type="checkbox" id="customCheck3">
                                             <label class="custom-control-label" for="customCheck3">
                                                 Light </label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" name="Smart.Wifi" type="checkbox" value="Light" id="customCheck4">
+                                            <input class="custom-control-input" name="Wifi" type="checkbox" id="customCheck4">
                                             <label class="custom-control-label" for="customCheck4">
                                                 Wi-fi
                                             </label>
