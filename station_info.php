@@ -21,6 +21,7 @@ $row = $result->fetch_assoc();
     <link rel="stylesheet" href="./includes/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
+    <script src="./includes/scripts.js"></script>
 </head>
 
 <body>
@@ -84,7 +85,7 @@ $row = $result->fetch_assoc();
     </header>
 
     <main id="main_station_info">
-        <form action="update.php" method="get">
+        <form id="edit_station">
             <div class="form-row">
                 <div class="col mr-5">
                     <div class="form-group">
@@ -189,7 +190,8 @@ $row = $result->fetch_assoc();
         </div>
     </div>
     <!-- modals -->
-    <script src="./includes/scripts.js"></script>
+
+
     <script type="text/javascript" src="./includes/logo.js"></script>
     <?php
     $connection->close();

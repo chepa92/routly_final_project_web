@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
     // getting stationID to parameter
     function findGetParameter(parameterName) {
         var result = null,
@@ -17,15 +17,15 @@ $(document).ready(function () {
     let stationID = findGetParameter('stationID');
 
 
-//edit station button, enables all inputs and change buttons
-    $('.editStation').click(function() {
-        $('input').each(function() {
+    //edit station button, enables all inputs and change buttons
+    $('.editStation').click(function () {
+        $('input').each(function () {
             if ($(this).attr('disabled')) {
                 $(this).removeAttr('disabled');
-            } 
+            }
         });
         $(".card-body").css("background-color", "white");
-        $(".editStation").remove(); 
+        $(".editStation").remove();
         var saveButton = '<button type="submit" class="btn btn-primary btn-block btn-lg">Save Station</button>';
         $(".col_of_button").append(saveButton);
     });
@@ -34,10 +34,10 @@ $(document).ready(function () {
 //deleting station from DB by sending id to delete.php
 function deleteStation(id) {
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function(id) {
+    xhttp.onreadystatechange = function (id) {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("response").innerHTML = this.responseText;
-            setTimeout(function(){ }, 1500);
+            setTimeout(function () {}, 1500);
             window.location.replace("/driver_stations.php");
         }
     };
@@ -45,19 +45,18 @@ function deleteStation(id) {
     xhttp.send();
 }
 
-function updateStation(id) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function(id) {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("response").innerHTML = this.responseText;
-            setTimeout(function(){ }, 1500);
-            window.location.replace("/driver_stations.php");
-        }
-    };
-    xhttp.open("GET", "update.php?id=" + id, true);
-    xhttp.send();
-}
-
-
-
-    
+//catching submit form of update of station    
+$(function () {
+    $('#edit_station').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'get',
+            url: 'update.php',
+            data: $('form').serialize(),
+            success: function (response) {
+                $('.col_of_button').html(response);
+                location.reload();
+            }
+        });
+    });
+});

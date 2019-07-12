@@ -35,7 +35,7 @@ $sql = "UPDATE stations SET `id` = '$id',
 
 
 if (mysqli_query($connection, $sql)) {
-    echo "New record created successfully";
+    echo "Station updated successfully";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($connection);
 }
