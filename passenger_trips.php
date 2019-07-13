@@ -29,7 +29,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
 <body>
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
-            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge.png" href="admin_stations.php">
+            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge.png" href="passenger_trips.php">
                 <div style="float: left;" class="logo">
                     <img src="./images/logo.png" width="160" alt="logo" class="logo__img hide-and-seek-animals__logo">
                 </div>
@@ -48,7 +48,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                     <a class="nav-link font-weight-bold" href="#">My Dashboard</a>
                 </li>
                 <li class="nav-item nav-link selected current">
-                    <a class="nav-link active font-weight-bold" href="admin_stations.php">Trips<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active font-weight-bold" href="passenger_trips.php">Trips<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link">
                     <a class="nav-link font-weight-bold" href="#">Feedback</a>
@@ -68,7 +68,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                     <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item nav-link crumb disabled">
-                    <a class="nav-link active font-weight-bold text-secondary" href="admin_stations.php">List<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active font-weight-bold text-secondary" href="passenger_trips.php">History<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link disabled">
                     <a class="nav-link" href="#"></a>
@@ -104,7 +104,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                 </select>
             </div>
             <div class="col-2">
-                <a class="btn btn-success btn-block btn-lg" href="admin_add_station.php" role="button">Add New Station</a>
+                <a class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#createTrip">New Order</a>
             </div>
         </div>
 
@@ -115,16 +115,15 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                         <th scope="col">From</th>
                         <th id="stationName" scope="col">To</th>
                         <th scope="col">Order Date</th>
-                        <th id="cityName" scope="col">Trip Time</th>
+                        <th scope="col">Distance</th>
+                        <th scope="col">Trip Time</th>
                         <th scope="col">Driver Name</th>
                         <th scope="col">Price</th>
-                        <th scope="col">Repeat Order</th>
+                        <th scope="col">Reorder</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    $query = "SELECT * FROM stations";
-
                     $query = "SELECT
                     stations.name fromStat,
                     stations_dest.name destStat,
@@ -132,7 +131,8 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                     TIMESTAMPDIFF(minute, trips.orderdate, trips.donedate) AS tripTime,
                     driver.firstname firstname,
                     driver.lastname lastname,
-                    price
+                    price,
+                    ST_Distance_Sphere( point(stations.latitude, stations.longtitude), point(stations_dest.latitude, stations_dest.longtitude))/1000 AS tripDist
                   FROM trips
                     INNER JOIN stations
                       ON trips.fromstationID = stations.id
@@ -152,6 +152,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                             echo "<tr><td>" . $row["fromStat"] . "</td>
                                       <td>" . $row["destStat"] . "</td>
                                       <td>" . $row["date"] . "</td>
+                                      <td>" . number_format((float) $row["tripDist"], 2, '.', '') . " km" . "</td>
                                       <td>" . $row["tripTime"] . " mins" . "</td>
                                       <td>" . $row["firstname"] . " " . $row["lastname"]  . "</td>
                                       <td>" . $row["price"] . "₪" . "</td>
@@ -167,6 +168,36 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
     </main>
 
     <footer></footer>
+    <!-- new station modal -->
+    <div class="modal fade" id="createTrip" tabindex="-1" role="dialog" aria-labelledby="createTrip" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createTrip">New Trip Order</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="response">
+                    <div class="search-box">
+                        <input type="text" autocomplete="off" placeholder="From.." />
+                        <div class="result"></div>
+                    </div>
+                </div>
+                <div class="modal-body" id="response">
+                    <div class="search-box">
+                        <input type="text" autocomplete="off" placeholder="To.." />
+                        <div class="result"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">No, thanks</button>
+                    <button type="button" class="btn btn-danger">Make New Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- new station modal -->
     <script src="./includes/scripts.js"></script>
 
 </body>
