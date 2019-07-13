@@ -107,7 +107,7 @@ main {
 
 .hide-and-seek-animals__image {
     position: absolute;
-    top: 130%;
+    top: 100%;
 }
 
 .hide-and-seek-animals__image._up {
@@ -124,7 +124,12 @@ main {
     transition: transform .2s ease, -webkit-transform .2s ease;
 }
 
-.navbar-third {
-    z-index: 999;
-    background-color: white;
+#top-logo{
+	padding: 0 10px;
+	cursor: pointer;
+        overflow: hidden;
+}
+
+.navbar.navbar-light{
+    padding: 0 1rem;
 }

@@ -3,7 +3,7 @@ include 'db.php';
 
 session_start();
 
-if (!isset($_SESSION["userid"]))
+if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
     header("location: index.php");
 ?>
 
@@ -23,13 +23,14 @@ if (!isset($_SESSION["userid"]))
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./includes/style.css">
+    <script type="text/javascript" src="./includes/logo.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
-            <a class="navbar-brand mr-auto p-2" href="index.html">
-                <div style="float: left; " id="top-logo" class="logo hide-and-seek-animals" data-image="./images/doge.png">
+            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge.png" href="index.html">
+                <div style="float: left;" class="logo" >
                     <img src="./images/logo.png" width="160" alt="logo" class="logo__img hide-and-seek-animals__logo">
                 </div>
             </a>
@@ -147,5 +148,5 @@ if (!isset($_SESSION["userid"]))
 
     <footer></footer>
     <script src="./includes/scripts.js"></script>
-    <script type="text/javascript" src="./includes/logo.js"></script>
+
 </body>
