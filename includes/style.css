@@ -134,6 +134,9 @@ main {
     padding: 0 1rem;
 }
 
+.logo__img{
+    height: 75px;
+}
 /* live search of table */
 #table tr[visible='false']{
   display:none;

@@ -29,9 +29,9 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
 <body>
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
-            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge.png" href="passenger_trips.php">
+            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge<?php echo mt_rand(1,2)?>.png" href="passenger_trips.php">
                 <div style="float: left;" class="logo">
-                    <img src="./images/logo.png" width="160" alt="logo" class="logo__img hide-and-seek-animals__logo">
+                    <img src="./images/logo.png" alt="logo" class="logo__img hide-and-seek-animals__logo">
                 </div>
             </a>
             <a class="material-icons navbar-brand p-2" href="#">notifications</a>
@@ -48,7 +48,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                     <a class="nav-link font-weight-bold" href="#">My Dashboard</a>
                 </li>
                 <li class="nav-item nav-link selected current">
-                    <a class="nav-link active font-weight-bold" href="passenger_trips.php">Trips<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active font-weight-bold" href="passenger_trips.php">My Trips<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link">
                     <a class="nav-link font-weight-bold" href="#">Feedback</a>
@@ -142,7 +142,8 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                       ON trips.userid = users.userid
                     INNER JOIN users driver
                       ON trips.driverid = driver.userid
-                  WHERE trips.userid =" . $_SESSION["userid"];
+                    WHERE trips.userid ='".$_SESSION["userid"]."'
+                    ORDER BY trips.orderdate DESC";
 
                     $result = mysqli_query($connection, $query);
 

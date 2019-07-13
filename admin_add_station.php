@@ -19,9 +19,9 @@
 
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
-            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge.png" href="admin_stations.php">
+            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge<?php echo mt_rand(1,2)?>.png" href="admin_stations.php">
                 <div style="float: left;" class="logo">
-                    <img src="./images/logo.png" width="160" alt="logo" class="logo__img hide-and-seek-animals__logo">
+                    <img src="./images/logo.png" alt="logo" class="logo__img hide-and-seek-animals__logo">
                 </div>
             </a>
             <a class="material-icons navbar-brand p-2 icon" href="#">notifications</a>
