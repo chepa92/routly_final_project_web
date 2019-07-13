@@ -22,7 +22,7 @@ if (!empty($_POST["loginMail"])) {
                 header("location: driver_orders.php");
                 break;
             case 'Passenger':
-                header("location: passenger_orders.php");
+                header("location: passenger_trips.php");
                 break;
             default:
                 $message = 'Who the fuck are you?';

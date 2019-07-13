@@ -133,3 +133,12 @@ main {
 .navbar.navbar-light{
     padding: 0 1rem;
 }
+
+/* live search of table */
+#table tr[visible='false']{
+  display:none;
+}
+
+#table tr[visible='true']{
+  display:table-row;
+}
