@@ -29,14 +29,13 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
 <body>
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
-            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge<?php echo mt_rand(1,2)?>.png" href="admin_stations.php">
-                <div style="float: left;" class="logo" >
+            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge<?php echo mt_rand(1, 2) ?>.png" href="admin_stations.php">
+                <div style="float: left;" class="logo">
                     <img src="./images/logo.png" alt="logo" class="logo__img hide-and-seek-animals__logo">
                 </div>
             </a>
-            <a class="material-icons navbar-brand p-2" href="#">notifications</a>
             <a class="material-icons navbar-brand p-2" href="#">settings</a>
-            <img src="images/PAmit.png" width="60" alt="">
+            <img id="user-logo" src="images/PAmit.png" width="60" alt="">
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light navbar-second navhover">
             <span class="navbar-toggler navbar-text-current">Station List</span>
@@ -135,7 +134,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
                                       <td>" . $row["city"] . "</td>
                                       <td>" . $row["street"] . "</td>
                                       <td>" . $row["comment"] . "</td>
-                                      <td><a href='/station_info.php?stationID=" . $row["id"] . "'>ChangeThis</a></td>
+                                      <td><a href='/admin_station_info.php?stationID=" . $row["id"] . "'>Change</a></td>
                                   </tr>";
                         }
                     }
@@ -147,6 +146,6 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
     </main>
 
     <footer></footer>
+    <?php include 'modal.php';?>
     <script src="./includes/scripts.js"></script>
-
 </body>

@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./includes/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
+    <script src="./includes/scripts.js"></script>
+    <script type="text/javascript" src="./includes/logo.js"></script>
 </head>
 
 <body>
@@ -24,9 +26,8 @@
                     <img src="./images/logo.png" alt="logo" class="logo__img hide-and-seek-animals__logo">
                 </div>
             </a>
-            <a class="material-icons navbar-brand p-2 icon" href="#">notifications</a>
             <a class="material-icons navbar-brand p-2 icon" href="#">settings</a>
-            <img class="d-flex" src="images/PAmit.png" width="60" alt="">
+            <img id="user-logo" class="d-flex" src="images/PAmit.png" width="60" alt="">
         </nav>
 
         <nav class="navbar navbar-expand-lg navbar-light navbar-second navhover">
@@ -160,6 +161,5 @@
     </main>
 
     <footer></footer>
-    <script src="./includes/scripts.js"></script>
-    <script type="text/javascript" src="./includes/logo.js"></script>
+    <?php include 'modal.php';?>
 </body>

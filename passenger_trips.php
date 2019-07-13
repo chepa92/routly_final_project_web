@@ -34,9 +34,8 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                     <img src="./images/logo.png" alt="logo" class="logo__img hide-and-seek-animals__logo">
                 </div>
             </a>
-            <a class="material-icons navbar-brand p-2" href="#">notifications</a>
             <a class="material-icons navbar-brand p-2" href="#">settings</a>
-            <img src="images/PAmit.png" width="60" alt="">
+            <img id="user-logo" src="images/PAmit.png" width="60" alt="">
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light navbar-second navhover">
             <span class="navbar-toggler navbar-text-current">Station List</span>
@@ -169,36 +168,6 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
     </main>
 
     <footer></footer>
-    <!-- new station modal -->
-    <div class="modal fade" id="createTrip" tabindex="-1" role="dialog" aria-labelledby="createTrip" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="createTrip">New Trip Order</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="response">
-                    <div class="search-box">
-                        <input type="text" autocomplete="off" placeholder="From.." />
-                        <div class="result"></div>
-                    </div>
-                </div>
-                <div class="modal-body" id="response">
-                    <div class="search-box">
-                        <input type="text" autocomplete="off" placeholder="To.." />
-                        <div class="result"></div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">No, thanks</button>
-                    <button type="button" class="btn btn-danger">Make New Order</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- new station modal -->
+    <?php include 'modal.php';?>
     <script src="./includes/scripts.js"></script>
-
 </body>

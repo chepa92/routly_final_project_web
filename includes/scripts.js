@@ -1,5 +1,10 @@
 $(document).ready(function () {
 
+    $('#user-logo').click(function () {
+        $('#logout_modal').modal('show')
+    });
+
+
     // getting stationID to parameter
     function findGetParameter(parameterName) {
         var result = null,

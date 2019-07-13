@@ -130,6 +130,10 @@ main {
         overflow: hidden;
 }
 
+#user-logo{
+    cursor: pointer;
+}
+
 .navbar.navbar-light{
     padding: 0 1rem;
 }
