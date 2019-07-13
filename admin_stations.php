@@ -29,7 +29,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
 <body>
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
-            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge.png" href="index.html">
+            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge.png" href="admin_stations.php">
                 <div style="float: left;" class="logo" >
                     <img src="./images/logo.png" width="160" alt="logo" class="logo__img hide-and-seek-animals__logo">
                 </div>
@@ -48,7 +48,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
                     <a class="nav-link font-weight-bold" href="#">My Dashboard</a>
                 </li>
                 <li class="nav-item nav-link selected current">
-                    <a class="nav-link active font-weight-bold" href="index.html">Station<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active font-weight-bold" href="admin_stations.php">Station<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link">
                     <a class="nav-link font-weight-bold" href="#">Drivers</a>
@@ -68,7 +68,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
                     <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item nav-link crumb disabled">
-                    <a class="nav-link active font-weight-bold text-secondary" href="index.html">List<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active font-weight-bold text-secondary" href="admin_stations.php">List<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link disabled">
                     <a class="nav-link" href="#"></a>
@@ -104,7 +104,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
                 </select>
             </div>
             <div class="col-2">
-                <a class="btn btn-success btn-block btn-lg" href="add_station.html" role="button">Add New Station</a>
+                <a class="btn btn-success btn-block btn-lg" href="admin_add_station.php" role="button">Add New Station</a>
             </div>
         </div>
 

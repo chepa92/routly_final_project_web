@@ -19,8 +19,8 @@
 
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
-            <a class="navbar-brand mr-auto p-2" href="index.html">
-                <div style="float: left; " id="top-logo" class="logo hide-and-seek-animals" data-image="./images/doge.png">
+            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge.png" href="admin_stations.php">
+                <div style="float: left;" class="logo">
                     <img src="./images/logo.png" width="160" alt="logo" class="logo__img hide-and-seek-animals__logo">
                 </div>
             </a>
@@ -39,7 +39,7 @@
                     <a class="nav-link font-weight-bold" href="#">My Dashboard</a>
                 </li>
                 <li class="nav-item nav-link selected current font-weight-bold">
-                    <a class="nav-link active" href="index.html">Station<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="admin_stations.php">Station<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link">
                     <a class="nav-link font-weight-bold" href="#">Drivers</a>
@@ -59,7 +59,7 @@
                     <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item nav-link crumb disabled">
-                    <a class="nav-link active font-weight-bold text-secondary" href="index.html">Add Station<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active font-weight-bold text-secondary" href="admin_stations.php">Add Station<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link disabled">
                     <a class="nav-link" href="#"></a>
@@ -150,7 +150,7 @@
             </div>
             <div class="form-row pt-3">
                 <div class="col mr-5">
-                    <a class="btn btn-warning btn-lg btn-block" href="index.html" role="button">Cancel</a>
+                    <a class="btn btn-warning btn-lg btn-block" href="admin_stations.php" role="button">Cancel</a>
                 </div>
                 <div class="col">
                     <button type="submit" class="btn btn-primary btn-block btn-lg">Save Station</button>

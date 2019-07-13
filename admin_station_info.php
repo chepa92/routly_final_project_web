@@ -1,6 +1,12 @@
 <?php
 include 'db.php';
 
+session_start();
+
+if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin') {
+    header("location: index.php");
+}
+
 $query = "SELECT * FROM stations WHERE id=" . $_GET["stationID"];
 $result = mysqli_query($connection, $query);
 $row = $result->fetch_assoc();
@@ -28,8 +34,8 @@ $row = $result->fetch_assoc();
 
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
-            <a class="navbar-brand mr-auto p-2" href="index.html">
-                <div style="float: left; " id="top-logo" class="logo hide-and-seek-animals" data-image="./images/doge.png">
+            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge.png" href="admin_stations.php">
+                <div style="float: left;" class="logo">
                     <img src="./images/logo.png" width="160" alt="logo" class="logo__img hide-and-seek-animals__logo">
                 </div>
             </a>
@@ -48,7 +54,7 @@ $row = $result->fetch_assoc();
                     <a class="nav-link  font-weight-bold" href="#">My Dashboard</a>
                 </li>
                 <li class="nav-item nav-link selected current font-weight-bold">
-                    <a class="nav-link active" href="index.html">Station<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="admin_stations.php">Station<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link">
                     <a class="nav-link  font-weight-bold" href="#">Drivers</a>
@@ -68,7 +74,7 @@ $row = $result->fetch_assoc();
                     <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item nav-link crumb disabled">
-                    <a class="nav-link active font-weight-bold text-secondary" href="index.html">Info<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active font-weight-bold text-secondary" href="admin_stations.php">Info<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav-link disabled">
                     <a class="nav-link" href="#"></a>
