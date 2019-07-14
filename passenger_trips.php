@@ -156,7 +156,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                                       <td>" . $row["tripTime"] . " mins" . "</td>
                                       <td>" . $row["firstname"] . " " . $row["lastname"]  . "</td>
                                       <td>" . $row["price"] . "₪" . "</td>
-                                      <td><a href='/station_info.php?stationID=" . $row["id"] . "'>ChangeThis</a></td>
+                                      <td><a href='/station_info.php?stationID=" . $row["id"] . "'>ReOrder</a></td>
                                   </tr>";
                         }
                     }

@@ -25,20 +25,25 @@
             </div>
             <div class="modal-body" id="response">
                 <div class="search-box">
-                    <input type="text" autocomplete="off" placeholder="From.." />
+                    <input type="text" class="from_class" autocomplete="off" placeholder="From.." />
                     <div class="result"></div>
                 </div>
             </div>
-            <div class="modal-body" id="response">
+            <div class="modal-body to_class" id="response">
                 <div class="search-box">
-                    <input type="text" autocomplete="off" placeholder="To.." />
+                    <input type="text" class="dest_class" autocomplete="off" placeholder="To.." />
                     <div class="result"></div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">No, thanks</button>
-                <button type="button" class="btn btn-danger">Make New Order</button>
-            </div>
+            <form id="make_order">
+                <div class="modal-footer">
+                    <input type="hidden" id="passId" name="passID" value='<?php echo $_SESSION["userid"];?>'>
+                    <input type="hidden" id="fromID" name="fromID" value="0">
+                    <input type="hidden" id="destID" name="destID" value="0">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">No, thanks</button>
+                    <input type="submit" class="btn btn-danger">
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -60,8 +65,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">No, thanks</button>
-                <button type="button" class="btn btn-danger"
-                    onclick="deleteStation('<?php echo $_GET["stationID"] ?>')">Yes, Delete Station</button>
+                <button type="button" class="btn btn-danger" onclick="deleteStation('<?php echo $_GET["stationID"] ?>')">Yes, Delete Station</button>
             </div>
         </div>
     </div>
