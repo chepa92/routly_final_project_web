@@ -124,66 +124,151 @@ main {
     transition: transform .2s ease, -webkit-transform .2s ease;
 }
 
-#top-logo{
-	padding: 0 10px;
-	cursor: pointer;
-        overflow: hidden;
+#top-logo {
+    padding: 0 10px;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-#user-logo{
+#user-logo {
     cursor: pointer;
 }
 
-.navbar.navbar-light{
+.navbar.navbar-light {
     padding: 0 1rem;
 }
 
-.logo__img{
+.logo__img {
     height: 75px;
 }
 
 /* live search */
-.search-box{
+.search-box {
     width: 300px;
     position: relative;
     display: inline-block;
     font-size: 14px;
 }
-.search-box input[type="text"]{
+
+.search-box input[type="text"] {
     height: 32px;
     padding: 5px 10px;
     border: 1px solid #CCCCCC;
     font-size: 14px;
 }
-.result{
-    position: absolute;        
+
+.result {
+    position: absolute;
     z-index: 999;
     top: 100%;
     left: 0;
 }
-.search-box input[type="text"], .result{
+
+.search-box input[type="text"],
+.result {
     width: 100%;
     box-sizing: border-box;
 }
 
-.result p{
+.result p {
     margin: 0;
     padding: 7px 10px;
     border: 1px solid #CCCCCC;
     border-top: none;
     cursor: pointer;
 }
-.result p:hover{
+
+.result p:hover {
     background: #f2f2f2;
 }
-/* live search */
-
 
 /* live search of table */
-#table tr[visible='false']{
-  display:none;
+#table tr[visible='false'] {
+    display: none;
 }
 
-#table tr[visible='true']{
-  display:table-row;
+#table tr[visible='true'] {
+    display: table-row;
+}
+
+/* Login page */
+
+.login_logo {
+    padding-bottom: 30px;
+}
+
+.login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+.log-form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.log-form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.log-form .logmein {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.log-form button:hover,
+.log-form button:active,
+.log-form button:focus {
+    background: #d9f3d2;
+}
+
+.log-form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.log-form .message a {
+    color: #2e5f20;
+    text-decoration: none;
+}
+
+.log-form .register-form {
+    display: none;
+}
+
+#log_body {
+    background: #d9f3d2;
+    background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+    background: -moz-linear-gradient(right, #76b852, #8DC26F);
+    background: -o-linear-gradient(right, #76b852, #8DC26F);
+    background: linear-gradient(to left, #76b852, #8DC26F);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

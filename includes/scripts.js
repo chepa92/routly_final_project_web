@@ -4,24 +4,15 @@ $(document).ready(function () {
         $('#logout_modal').modal('show')
     });
 
+    //login screen animation
+    $('.message a').click(function () {
+        $('form').animate({
+            height: "toggle",
+            opacity: "toggle"
+        }, "slow");
+    });
 
-    // getting stationID to parameter
-    function findGetParameter(parameterName) {
-        var result = null,
-            tmp = [];
-        location.search
-            .substr(1)
-            .split("&")
-            .forEach(function (item) {
-                tmp = item.split("=");
-                if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-            });
-        return result;
-    }
-
-    let stationID = findGetParameter('stationID');
-
-
+    //make new order modal
     $('#make_order').on('submit', function (e) {
         let fromStat = $('.from_class').val();
         let fromNum = fromStat.substr(fromStat.length - 5);
@@ -36,7 +27,7 @@ $(document).ready(function () {
             data: $('form').serialize(),
             success: function (response) {
                 $('.modal-content').html(response);
-                
+
             }
         });
     });

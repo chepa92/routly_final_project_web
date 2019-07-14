@@ -46,37 +46,35 @@ if (!empty($_POST["loginMail"])) {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="./includes/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
     <script src="./includes/scripts.js"></script>
 </head>
 
-<body>
-
-    <header></header>
+<body id="log_body">
 
     <main>
-        <div class="container">
-            <h1>Login</h1>
-            <form action="#" method="post" id="frm">
-                <div class="form-group">
-                    <label for="loginMail">Email: </label>
-                    <input type="email" class="form-control" name="loginMail" id="loginMail" aria-describedby="emailHelp" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password: </label>
-                    <input type="password" class="form-control" name="loginPass" id="loginPass" placeholder="Enter Password">
-                </div>
-                <button type="submit" class="btn btn-primary">Log Me In</button>
-                <div class="error-message">
-                    <?php if (isset($message)) {
-                        echo $message;
-                    } ?>
-                </div>
-            </form>
+        <div class="login-page">
+            <div class="log-form">
+                <img src="./images/logo.png" class="login_logo" width="200px" alt="logo">
+                <form class="register-form" method="post" id="frm">
+                    <span>admin@admin.com;admin</span>
+                    <span>driver1@driver.com;driver1</span>
+                    <span>pass1@pass.com;pass1</span>
+                    <p class="message">Already know password? <a href="#">Sign In</a></p>
+                </form>
+                <form class="login-form" action="#" method="post" id="frm">
+                    <input type="email" name="loginMail" id="loginMail" aria-describedby="emailHelp" placeholder="email">
+                    <input type="password" name="loginPass" id="loginPass" placeholder="password">
+                    <button type="submit" class="btn btn-primary logmein">Log Me In</button>
+                    <div class="error-message">
+                        <?php if (isset($message)) {
+                            echo $message;
+                        } ?>
+                    </div>
+                    <p class="message">Dont know password? <a href="#">Press Here</a></p>
+                </form>
+            </div>
         </div>
     </main>
-
-
 
 </body>
