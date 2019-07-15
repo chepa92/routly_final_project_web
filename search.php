@@ -20,7 +20,7 @@ if(isset($_REQUEST["term"])){
             if(mysqli_num_rows($result) > 0){
                 // Fetch result rows as an associative array
                 while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                    echo "<p>" . $row["name"] . ' <input type="hidden" id="fromID" name="fromID" value="0">' . $row["id"] . "</p>";
+                    echo "<p>" . $row["name"] . $row["id"] . "</p>";
                 }
             } else{
                 echo "<p>No matches found</p>";

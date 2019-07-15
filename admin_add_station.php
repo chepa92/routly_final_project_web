@@ -31,7 +31,7 @@
         </nav>
 
         <nav class="navbar navbar-expand-lg navbar-light navbar-second navhover">
-            <span class="navbar-toggler navbar-text-current">Station Info</span>
+            <span class="navbar-toggler navbar-text-current">Add New Station</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

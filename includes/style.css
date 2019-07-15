@@ -101,6 +101,10 @@ main {
     #main_station_info .btn-warning {
         margin-bottom: 30px
     }
+
+    .card-body {
+        height: auto;
+    }
 }
 
 

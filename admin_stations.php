@@ -84,26 +84,21 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
 
     <main>
         <div class="form-row">
-            <div class="col-4">
+            <div class="col-6">
                 <input type="text" id="table-search" class="form-control form-control-lg d-none d-sm-block d-sm-none" placeholder="Search">
             </div>
             <div class="col-2">
                 <select class="form-control form-control-lg" name="District" id="District">
-                    <option value="all">All Districts</option>
+                    <option value="">All Districts</option>
                 </select>
             </div>
             <div class="col-2">
                 <select class="form-control form-control-lg" name="City" id="City">
-                    <option value="all">All Cities</option>
+                    <option value="">All Cities</option>
                 </select>
             </div>
             <div class="col-2">
-                <select class="form-control form-control-lg" name="Smart" id="Smart">
-                    <option value="all">All Options</option>
-                </select>
-            </div>
-            <div class="col-2">
-                <a class="btn btn-success btn-block btn-lg" href="admin_add_station.php" role="button">Add New Station</a>
+                <a class="btn btn-success btn-block btn-lg" href="admin_add_station.php" role="button">New Station</a>
             </div>
         </div>
 
@@ -134,7 +129,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
                                       <td>" . $row["city"] . "</td>
                                       <td>" . $row["street"] . "</td>
                                       <td>" . $row["comment"] . "</td>
-                                      <td><a href='/admin_station_info.php?stationID=" . $row["id"] . "'>Change</a></td>
+                                      <td><a href='/admin_station_info.php?stationID=" . $row["id"] . "'>Info</a></td>
                                   </tr>";
                         }
                     }
