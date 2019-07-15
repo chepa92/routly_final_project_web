@@ -29,9 +29,9 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
 <body>
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
-            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge<?php echo mt_rand(1,2)?>.png" href="passenger_trips.php">
+            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="images/doge<?php echo mt_rand(1,2)?>.png" href="passenger_trips.php">
                 <div style="float: left;" class="logo">
-                    <img src="./images/logo.png" alt="logo" class="logo__img hide-and-seek-animals__logo">
+                    <img src="images/logo.png" alt="logo" class="logo__img hide-and-seek-animals__logo">
                 </div>
             </a>
             <a class="material-icons navbar-brand p-2" href="#">settings</a>
@@ -84,7 +84,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
 
     <main>
         <div class="form-row">
-            <div class="col-4">
+            <div class="col-6">
                 <input type="text" id="table-search" class="form-control form-control-lg d-none d-sm-block d-sm-none" placeholder="Search">
             </div>
             <div class="col-2">
@@ -95,11 +95,6 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
             <div class="col-2">
                 <select class="form-control form-control-lg" name="City" id="City">
                     <option value="all">All Cities</option>
-                </select>
-            </div>
-            <div class="col-2">
-                <select class="form-control form-control-lg" name="Smart" id="Smart">
-                    <option value="all">All Options</option>
                 </select>
             </div>
             <div class="col-2">
@@ -156,7 +151,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                                       <td>" . $row["tripTime"] . " mins" . "</td>
                                       <td>" . $row["firstname"] . " " . $row["lastname"]  . "</td>
                                       <td>" . $row["price"] . "₪" . "</td>
-                                      <td><a href='/station_info.php?stationID=" . $row["id"] . "'>ReOrder</a></td>
+                                      <td><a href='#" . $row["id"] . "'>Reorder</a></td>
                                   </tr>";
                         }
                     }

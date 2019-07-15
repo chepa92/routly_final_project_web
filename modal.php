@@ -25,13 +25,13 @@
             </div>
             <div class="modal-body" id="response">
                 <div class="search-box">
-                    <input type="text" class="from_class" autocomplete="off" placeholder="From.." />
+                    <input type="text" class="from_class form-control-lg" autocomplete="off" placeholder="From.." />
                     <div class="result"></div>
                 </div>
             </div>
             <div class="modal-body to_class" id="response">
                 <div class="search-box">
-                    <input type="text" class="dest_class" autocomplete="off" placeholder="To.." />
+                    <input type="text" class="dest_class form-control-lg" autocomplete="off" placeholder="To.." />
                     <div class="result"></div>
                 </div>
             </div>
