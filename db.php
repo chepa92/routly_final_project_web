@@ -1,8 +1,8 @@
 <?php
-        $dbhost = "routly.chepa.net";
-        $dbuser = "routly";
-        $dbpass = "12211221";
-        $dbname = "routly";
+        $dbhost = "182.50.133.168";
+        $dbuser = "studDB19a";
+        $dbpass = "stud19DB1!";
+        $dbname = "studDB19a";
 
         // Create connection
         $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);

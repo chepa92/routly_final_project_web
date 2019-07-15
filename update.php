@@ -18,7 +18,7 @@ $Light = $_GET['Light'] == 'on' ? '1' : '0';
 $Wifi = $_GET['Wifi'] == 'on' ? '1' : '0';
 
 
-$sql = "UPDATE stations SET `id` = '$id', 
+$sql = "UPDATE tb_stations_201 SET `id` = '$id', 
                             `name` = '$StationName', 
                             `district` = '$District', 
                             `city` = '$City', 

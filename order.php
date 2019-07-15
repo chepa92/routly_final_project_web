@@ -5,7 +5,7 @@ $passID = $_GET['passID'];
 $fromID = $_GET['fromID'];
 $destID = $_GET['destID'];
 
-$sql = "INSERT INTO trips (fromstationID, toStationID, userid) 
+$sql = "INSERT INTO tb_trips_201 (fromstationID, toStationID, userid) 
 VALUES ('$fromID', '$destID', '$passID')";
 
 if (mysqli_query($connection, $sql)) {

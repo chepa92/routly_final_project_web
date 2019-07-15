@@ -117,7 +117,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
                 </thead>
                 <tbody>
                     <?php
-                    $query = "SELECT * FROM stations";
+                    $query = "SELECT * FROM tb_stations_201";
                     $result = mysqli_query($connection, $query);
 
                     if ($result->num_rows > 0) {

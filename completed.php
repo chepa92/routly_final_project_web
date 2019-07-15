@@ -5,7 +5,7 @@ $passID = $_GET['passID'];
 $tripID = $_GET['tridID'];
 $price = $_GET['price'];
 
-$sql = "UPDATE trips SET driverid = '$passID', price  = '$price', donedate = now() WHERE tripid = '$tripID'";
+$sql = "UPDATE tb_trips_201 SET driverid = '$passID', price  = '$price', donedate = now() WHERE tripid = '$tripID'";
 
 if (mysqli_query($connection, $sql)) {
     echo "<h4>Trip ended</h4>";

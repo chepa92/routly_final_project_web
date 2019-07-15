@@ -16,7 +16,7 @@ $Conditioner = $_GET['Conditioner'] == 'on' ? '1' : '0';
 $Light = $_GET['Light'] == 'on' ? '1' : '0';
 $Wifi = $_GET['Wifi'] == 'on' ? '1' : '0';
 
-$sql = "INSERT INTO stations (id, name, district, city, street, latitude, longtitude, comment, map, light, conditioner, wifi) 
+$sql = "INSERT INTO tb_stations_201 (id, name, district, city, street, latitude, longtitude, comment, map, light, conditioner, wifi) 
 VALUES ('$id', '$StationName', '$District', '$City', '$Street', '$Latitude', '$Longitude', '$Comment', '$Screen', '$Light', '$Conditioner', '$Wifi')";
 
 if (mysqli_query($connection, $sql)) {

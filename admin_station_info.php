@@ -7,7 +7,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin') {
     header("location: index.php");
 }
 
-$query = "SELECT * FROM stations WHERE id=" . $_GET["stationID"];
+$query = "SELECT * FROM tb_stations_201 WHERE id=" . $_GET["stationID"];
 $result = mysqli_query($connection, $query);
 $row = $result->fetch_assoc();
 ?>

@@ -108,11 +108,11 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Driver')
                     users.lastname lastname,
                     trips.tripid
                   FROM trips
-                    INNER JOIN stations
+                    INNER JOIN tb_stations_201
                       ON trips.fromstationID = stations.id
                     INNER JOIN stations stations_dest
                       ON trips.toStationID = stations_dest.id
-                    INNER JOIN users
+                    INNER JOIN tb_users_201
                       ON trips.userid = users.userid
                   WHERE trips.driverid IS NULL
                   ORDER BY trips.orderdate DESC";

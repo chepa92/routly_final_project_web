@@ -3,7 +3,7 @@ include 'db.php';
  
 if(isset($_REQUEST["term"])){
     // Prepare a select statement
-    $sql = "SELECT * FROM stations WHERE name LIKE ?";
+    $sql = "SELECT * FROM tb_stations_201 WHERE name LIKE ?";
     
     if($stmt = mysqli_prepare($connection, $sql)){
         // Bind variables to the prepared statement as parameters
