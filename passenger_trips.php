@@ -35,7 +35,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                 </div>
             </a>
             <a class="material-icons navbar-brand p-2" href="#">settings</a>
-            <img id="user-logo" src="images/PAmit.png" width="60" alt="">
+            <img id="user-logo" src="images/pass1.png" width="60" alt="">
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light navbar-second navhover">
             <span class="navbar-toggler navbar-text-current">Station List</span>
