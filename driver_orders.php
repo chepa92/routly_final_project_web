@@ -8,7 +8,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Driver')
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Home</title>
@@ -23,7 +23,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Driver')
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./includes/style.css">
-    <script type="text/javascript" src="./includes/logo.js"></script>
+    <script src="./includes/logo.js"></script>
 </head>
 
 <body>
@@ -144,7 +144,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Driver')
     <div class="modal fade" id="acceptOrder" tabindex="-1" role="dialog" aria-labelledby="acceptOrder" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <form id="make_order">
+                <form id="finish_order">
                     <div class="modal-header">
                         <h5 class="modal-title">Are you finished the ride?</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -153,7 +153,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Driver')
                     </div>
                     <div class="modal-body" id="response">
                         <div class="form-group mx-sm-3 mb-2">
-                            <input type="text" class="form-control" type="text" id="price" name="price" placeholder="Final Price">
+                            <input type="text" class="form-control" id="price" name="price" placeholder="Final Price">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -170,3 +170,5 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Driver')
     <?php include 'modal.php'; ?>
     <script src="./includes/scripts.js"></script>
 </body>
+
+</html>

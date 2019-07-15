@@ -8,7 +8,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Home</title>
@@ -23,13 +23,13 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./includes/style.css">
-    <script type="text/javascript" src="./includes/logo.js"></script>
+    <script src="./includes/logo.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
-            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="images/doge<?php echo mt_rand(1,2)?>.png" href="passenger_trips.php">
+            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="images/doge<?php echo mt_rand(1, 2) ?>.png" href="passenger_trips.php">
                 <div style="float: left;" class="logo">
                     <img src="images/logo.png" alt="logo" class="logo__img hide-and-seek-animals__logo">
                 </div>
@@ -136,7 +136,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                       ON trips.userid = users.userid
                     INNER JOIN users driver
                       ON trips.driverid = driver.userid
-                    WHERE trips.userid ='".$_SESSION["userid"]."'
+                    WHERE trips.userid ='" . $_SESSION["userid"] . "'
                     ORDER BY trips.orderdate DESC";
 
                     $result = mysqli_query($connection, $query);
@@ -163,6 +163,44 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
     </main>
 
     <footer></footer>
-    <?php include 'modal.php';?>
+
+    <!-- new order  modal -->
+    <div class="modal fade" id="createTrip" tabindex="-1" role="dialog" aria-labelledby="createTrip" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content add_station_modal">
+                <div class="modal-header">
+                    <h5 class="modal-title">New Trip Order</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="response">
+                    <div class="search-box">
+                        <input type="text" class="from_class form-control-lg" autocomplete="off" placeholder="From.." />
+                        <div class="result"></div>
+                    </div>
+                </div>
+                <div class="modal-body to_class">
+                    <div class="search-box">
+                        <input type="text" class="dest_class form-control-lg" autocomplete="off" placeholder="To.." />
+                        <div class="result"></div>
+                    </div>
+                </div>
+                <form id="make_order">
+                    <div class="modal-footer">
+                        <input type="hidden" id="passId" name="passID" value='<?php echo $_SESSION["userid"]; ?>'>
+                        <input type="hidden" id="fromID" name="fromID" value="0">
+                        <input type="hidden" id="destID" name="destID" value="0">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">No, thanks</button>
+                        <input type="submit" class="btn btn-danger" value="Order">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- new order modal -->
+
+    <?php include 'modal.php'; ?>
     <script src="./includes/scripts.js"></script>
 </body>
+</html>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title>Add Station</title>
@@ -14,14 +15,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
     <script src="./includes/scripts.js"></script>
-    <script type="text/javascript" src="./includes/logo.js"></script>
+    <script src="./includes/logo.js"></script>
 </head>
 
 <body>
 
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
-            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge<?php echo mt_rand(1,2)?>.png" href="admin_stations.php">
+            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge<?php echo mt_rand(1, 2) ?>.png" href="admin_stations.php">
                 <div style="float: left;" class="logo">
                     <img src="./images/logo.png" alt="logo" class="logo__img hide-and-seek-animals__logo">
                 </div>
@@ -161,5 +162,5 @@
     </main>
 
     <footer></footer>
-    <?php include 'modal.php';?>
+    <?php include 'modal.php'; ?>
 </body>

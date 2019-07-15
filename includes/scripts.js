@@ -189,7 +189,7 @@ $(function () {
 
 //catching submit form of trip maded
 $(function () {
-    $('#make_order').on('submit', function (e) {
+    $('#finish_order').on('submit', function (e) {
         e.preventDefault();
         $.ajax({
             type: 'get',

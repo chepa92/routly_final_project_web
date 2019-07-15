@@ -8,7 +8,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Home</title>
@@ -23,7 +23,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./includes/style.css">
-    <script type="text/javascript" src="./includes/logo.js"></script>
+    <script src="./includes/logo.js"></script>
 </head>
 
 <body>
@@ -141,6 +141,8 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
     </main>
 
     <footer></footer>
-    <?php include 'modal.php';?>
+    <?php include 'modal.php'; ?>
     <script src="./includes/scripts.js"></script>
 </body>
+
+</html>

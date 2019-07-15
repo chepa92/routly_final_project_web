@@ -13,6 +13,7 @@ $row = $result->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title>Station info</title>
@@ -28,14 +29,14 @@ $row = $result->fetch_assoc();
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap" rel="stylesheet">
     <script src="./includes/scripts.js"></script>
-    <script type="text/javascript" src="./includes/logo.js"></script>
+    <script src="./includes/logo.js"></script>
 </head>
 
 <body>
 
     <header>
         <nav class="navbar navbar-light navbar-top d-flex justify-content-end">
-            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge<?php echo mt_rand(1,2)?>.png" href="admin_stations.php">
+            <a class="navbar-brand mr-auto p-2 hide-and-seek-animals" id="top-logo" data-image="./images/doge<?php echo mt_rand(1, 2) ?>.png" href="admin_stations.php">
                 <div style="float: left;" class="logo">
                     <img src="./images/logo.png" alt="logo" class="logo__img hide-and-seek-animals__logo">
                 </div>
@@ -175,8 +176,30 @@ $row = $result->fetch_assoc();
     </main>
     <footer></footer>
 
-
-    <?php include 'modal.php';?>
+    <!--delete station modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Warning!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="response">
+                    <h6>Are you sure you want to delete this station?</h6>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">No, thanks</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteStation('<?php echo $_GET["stationID"] ?>')">Yes, Delete Station</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- delete station modal -->
+    <?php include 'modal.php'; ?>
 
     <?php $connection->close(); ?>
 </body>
+
+</html>

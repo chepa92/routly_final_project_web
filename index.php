@@ -63,7 +63,7 @@ if (!empty($_POST["loginMail"])) {
                     <p class="message">Already know password? <a href="#">Sign In</a></p>
                 </form>
                 <form class="login-form" action="#" method="post" id="frm">
-                    <input type="email" name="loginMail" id="loginMail" aria-describedby="emailHelp" placeholder="email">
+                    <input type="email" name="loginMail" id="loginMail" placeholder="email">
                     <input type="password" name="loginPass" id="loginPass" placeholder="password">
                     <button type="submit" class="btn btn-primary logmein">Log Me In</button>
                     <div class="error-message">
