@@ -3,9 +3,9 @@
     <div class="modal-dialog modal-dialog-centered modal-sm">
         <div class="modal-content">
             <div class="modal-header">
-                <h4>Logout <i class="fa fa-lock"></i></h4>
+                <h4>Logout<i class="fa fa-lock"></i></h4>
             </div>
-            <div class="modal-body"><i class="fa fa-question-circle"></i> Are you sure you want to log-off?</div>
+            <div class="modal-body"><i class="fa fa-question-circle"></i> Are you sure you want to Logout?</div>
             <div class="modal-footer"><a href="index.php" class="btn btn-danger btn-block">Logout</a></div>
         </div>
     </div>
@@ -49,7 +49,6 @@
 </div>
 <!-- new station modal -->
 
-
 <!--delete station modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -71,3 +70,4 @@
     </div>
 </div>
 <!-- delete station modal -->
+

@@ -15,7 +15,6 @@ $(document).ready(function () {
     //add options on creating of station
     var json_data = []
     $.getJSON("data/STATIONS_DATA.json", function (data) {
-        console.log(data);
         var flag = 0;
         json_data = data
         for (var row of data) {
@@ -46,6 +45,13 @@ $(document).ready(function () {
 
             }
         });
+    });
+
+    //acception modal call
+    $('#accept_trip').click(function () {
+        $('#acceptOrder').modal('show');
+        let tripID = parseInt(this.attributes.value.value , 10);
+        $('#tripID').val(tripID);
     });
 
 
@@ -175,6 +181,21 @@ $(function () {
             data: $('form').serialize(),
             success: function (response) {
                 $('.col_of_button').html(response);
+                location.reload();
+            }
+        });
+    });
+});
+
+//catching submit form of trip maded
+$(function () {
+    $('#make_order').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'get',
+            url: 'completed.php',
+            data: $('form').serialize(),
+            success: function (response) {
                 location.reload();
             }
         });

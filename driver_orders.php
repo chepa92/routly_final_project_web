@@ -125,7 +125,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Driver')
                                       <td>" . $row["date"] . "</td>
                                       <td>" . number_format((float) $row["tripDist"], 2, '.', '') . " km" . "</td>
                                       <td>" . $row["firstname"] . " " . $row["lastname"]  . "</td>
-                                      <td><a href='/station_info.php?stationID=" . $row["tripid"] . "'>Accept</a></td>
+                                      <td><a id='accept_trip' value='" . $row["tripid"] . "'>Accept</a></td>
                                   </tr>";
                         }
                     }
@@ -137,6 +137,34 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Driver')
     </main>
 
     <footer></footer>
+
+    <!-- accept order modal -->
+    <div class="modal fade" id="acceptOrder" tabindex="-1" role="dialog" aria-labelledby="acceptOrder" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form id="make_order">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="acceptOrder">Are you finished the ride?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="response">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="text" class="form-control" type="text" id="price" name="price" placeholder="Final Price">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" id="passId" name="passID" value='<?php echo $_SESSION["userid"]; ?>'>
+                        <input type="hidden" id="tripID" name="tridID" value="0">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">No, thanks</button>
+                        <input type="submit" value="Finish Ride" class="btn btn-danger">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <?php include 'modal.php'; ?>
     <script src="./includes/scripts.js"></script>
 </body>
