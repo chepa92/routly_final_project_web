@@ -88,12 +88,12 @@
                     </div>
                     <div class="form-group pt-3">
                         <select class="form-control form-control-lg" name="District" id="District">
-                            <option value="all">All Districts</option>
+                            <option disabled selected value="all">All Districts</option>
                         </select>
                     </div>
                     <div class="form-group pt-3">
                         <select class="form-control form-control-lg" name="City" id="City">
-                            <option value="all">All Cities</option>
+                            <option disabled selected value="all">All Cities</option>
                         </select>
                     </div>
                     <div class="form-group pt-3">

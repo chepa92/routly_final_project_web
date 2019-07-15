@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    //user logo modal
     $('#user-logo').click(function () {
         $('#logout_modal').modal('show')
     });
@@ -10,6 +10,22 @@ $(document).ready(function () {
             height: "toggle",
             opacity: "toggle"
         }, "slow");
+    });
+
+    //add options on creating of station
+    var json_data = []
+    $.getJSON("data/STATIONS_DATA.json", function (data) {
+        console.log(data);
+        var flag = 0;
+        json_data = data
+        for (var row of data) {
+            var optionDist = $('<option>' + row.district + '</option>')
+            $('#District').append(optionDist)
+            row.city.forEach(element => {
+                var optionCity = $('<option>' + element + '</option>')
+                $('#City').append(optionCity)
+            });
+        }
     });
 
     //make new order modal
