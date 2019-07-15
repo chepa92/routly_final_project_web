@@ -9,5 +9,9 @@
  {
   "district":"Haifa",
   "city":[ "Haifa", "Acre", "Nahariyya", "Kiryat Ata" ]
+ },
+ {
+  "district":"South",
+  "city":[ "Dead Sea", "Eilat", "Beer Sheva", "Arad" ]
  }
 ]

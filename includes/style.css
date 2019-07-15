@@ -77,7 +77,11 @@ main {
     tr :nth-child(4),
     tr :nth-child(5),
     tr :nth-child(6) {
-        display: none
+        display: none;
+    }
+
+    .mob_adapt{
+        display: none;
     }
 
     .col-4,
@@ -173,7 +177,7 @@ main {
 
 .search-box input[type="text"],
 .result {
-    width: 100%;
+    width: 150%;
     box-sizing: border-box;
 }
 
@@ -279,3 +283,4 @@ main {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+

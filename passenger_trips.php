@@ -98,7 +98,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                 </select>
             </div>
             <div class="col-2">
-                <a class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#createTrip">New Order</a>
+                <a href="" class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#createTrip">New Order</a>
             </div>
         </div>
 

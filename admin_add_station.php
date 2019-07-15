@@ -77,7 +77,7 @@
     </header>
 
     <main id="main_station_info">
-        <form action="insert.php" method="get">
+        <form id="insert_station">
             <div class="form-row pt-5">
                 <div class="col mr-5">
                     <div class="form-group">

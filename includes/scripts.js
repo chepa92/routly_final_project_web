@@ -48,7 +48,7 @@ $(document).ready(function () {
     });
 
     //acception modal call
-    $('#accept_trip').click(function () {
+    $('.accept_trip').click(function () {
         $('#acceptOrder').modal('show');
         let tripID = parseInt(this.attributes.value.value , 10);
         $('#tripID').val(tripID);
@@ -164,7 +164,7 @@ function deleteStation(id) {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("response").innerHTML = this.responseText;
             setTimeout(function () {}, 1500);
-            window.location.replace("/driver_stations.php");
+            window.location.replace("/admin_stations.php");
         }
     };
     xhttp.open("GET", "delete.php?id=" + id, true);
@@ -197,6 +197,21 @@ $(function () {
             data: $('form').serialize(),
             success: function (response) {
                 location.reload();
+            }
+        });
+    });
+});
+
+//adding new station via ajax
+$(function () {
+    $('#insert_station').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'get',
+            url: 'insert.php',
+            data: $('form').serialize(),
+            success: function (response) {
+                window.location.replace("/admin_stations.php");
             }
         });
     });

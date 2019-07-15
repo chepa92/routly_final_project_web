@@ -87,11 +87,13 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Driver')
             <table id="table" class="table table-striped table-bordered mt-4 table-hover">
                 <thead class="table-success">
                     <tr>
+
                         <th scope="col">From</th>
                         <th id="stationName" scope="col">To</th>
                         <th scope="col">Order Date</th>
                         <th scope="col">Distance</th>
-                        <th scope="col">Passanger Name</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
                         <th scope="col">Order</th>
                     </tr>
                 </thead>
@@ -124,8 +126,8 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Driver')
                                       <td>" . $row["destStat"] . "</td>
                                       <td>" . $row["date"] . "</td>
                                       <td>" . number_format((float) $row["tripDist"], 2, '.', '') . " km" . "</td>
-                                      <td>" . $row["firstname"] . " " . $row["lastname"]  . "</td>
-                                      <td><a id='accept_trip' value='" . $row["tripid"] . "'>Accept</a></td>
+                                      <td>" . $row["firstname"] . "</td><td>" . $row["lastname"]  . "</td>
+                                      <td><a href='#' class='accept_trip' value='" . $row["tripid"] . "'>Accept</a></td>
                                   </tr>";
                         }
                     }
@@ -144,7 +146,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Driver')
             <div class="modal-content">
                 <form id="make_order">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="acceptOrder">Are you finished the ride?</h5>
+                        <h5 class="modal-title">Are you finished the ride?</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

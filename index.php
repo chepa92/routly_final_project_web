@@ -55,8 +55,8 @@ if (!empty($_POST["loginMail"])) {
     <main>
         <div class="login-page">
             <div class="log-form">
-                <img src="./images/logo.png" class="login_logo" width="200px" alt="logo">
-                <form class="register-form" method="post" id="frm">
+                <img src="images/logo.png" class="login_logo" width="200" alt="logo">
+                <form class="register-form" method="post" id="frm1">
                     <span>admin@admin.com;admin</span>
                     <span>driver1@driver.com;driver1</span>
                     <span>pass1@pass.com;pass1</span>

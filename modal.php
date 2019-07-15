@@ -13,10 +13,10 @@
 <!-- logout modal -->
 
 
-<!-- new station modal -->
+<!-- new order  modal -->
 <div class="modal fade" id="createTrip" tabindex="-1" role="dialog" aria-labelledby="createTrip" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content add_station_modal">
             <div class="modal-header">
                 <h5 class="modal-title" id="createTrip">New Trip Order</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -41,13 +41,13 @@
                     <input type="hidden" id="fromID" name="fromID" value="0">
                     <input type="hidden" id="destID" name="destID" value="0">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">No, thanks</button>
-                    <input type="submit" class="btn btn-danger">
+                    <input type="submit" class="btn btn-danger" value="Order">
                 </div>
             </form>
         </div>
     </div>
 </div>
-<!-- new station modal -->
+<!-- new order modal -->
 
 <!--delete station modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
