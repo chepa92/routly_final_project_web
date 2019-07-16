@@ -42,7 +42,7 @@ $(document).ready(function () {
             data: $('form').serialize(),
             success: function (response) {
                 $('.modal-content').html(response);
-
+                location.reload();
             }
         });
     });

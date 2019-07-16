@@ -126,20 +126,42 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                     driver.firstname firstname,
                     driver.lastname lastname,
                     price,
-                    ST_Distance_Sphere( point(stations.latitude, stations.longtitude), point(stations_dest.latitude, stations_dest.longtitude))/1000 AS tripDist
-                  FROM trips
-                    INNER JOIN stations
+                    stations.latitude x1, 
+                    stations.longtitude y1,
+                    stations_dest.latitude x2, 
+                    stations_dest.longtitude y2
+                  FROM tb_trips_201 trips
+                    INNER JOIN tb_stations_201 stations
                       ON trips.fromstationID = stations.id
-                    INNER JOIN stations stations_dest
+                    INNER JOIN tb_stations_201 stations_dest
                       ON trips.toStationID = stations_dest.id
-                    INNER JOIN users
+                    INNER JOIN tb_users_201 users
                       ON trips.userid = users.userid
-                    INNER JOIN users driver
+                    INNER JOIN tb_users_201 driver
                       ON trips.driverid = driver.userid
                     WHERE trips.userid ='" . $_SESSION["userid"] . "'
                     ORDER BY trips.orderdate DESC";
 
                     $result = mysqli_query($connection, $query);
+
+                    function distance($lat1, $lon1, $lat2, $lon2, $unit)
+                    {
+
+                        $theta = $lon1 - $lon2;
+                        $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+                        $dist = acos($dist);
+                        $dist = rad2deg($dist);
+                        $miles = $dist * 60 * 1.1515;
+                        $unit = strtoupper($unit);
+
+                        if ($unit == "K") {
+                            return ($miles * 1.609344);
+                        } else if ($unit == "N") {
+                            return ($miles * 0.8684);
+                        } else {
+                            return $miles;
+                        }
+                    }
 
                     if ($result->num_rows > 0) {
                         // output data of each row
@@ -147,7 +169,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
                             echo "<tr><td>" . $row["fromStat"] . "</td>
                                       <td>" . $row["destStat"] . "</td>
                                       <td>" . $row["date"] . "</td>
-                                      <td>" . number_format((float) $row["tripDist"], 2, '.', '') . " km" . "</td>
+                                      <td>" . number_format((float) distance($row["x1"], $row["y1"], $row["x2"], $row["y2"], "K"), 2, '.', '') . " km" . "</td>
                                       <td>" . $row["tripTime"] . " mins" . "</td>
                                       <td>" . $row["firstname"] . " " . $row["lastname"]  . "</td>
                                       <td>" . $row["price"] . "₪" . "</td>
