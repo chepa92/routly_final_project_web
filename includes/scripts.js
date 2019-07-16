@@ -163,8 +163,7 @@ function deleteStation(id) {
     xhttp.onreadystatechange = function (id) {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("response").innerHTML = this.responseText;
-            setTimeout(function () {}, 1500);
-            window.location.replace("/admin_stations.php");
+            window.location.assign("admin_stations.php");
         }
     };
     xhttp.open("GET", "delete.php?id=" + id, true);
@@ -211,7 +210,7 @@ $(function () {
             url: 'insert.php',
             data: $('form').serialize(),
             success: function (response) {
-                window.location.replace("/admin_stations.php");
+                window.location.assign("./admin_stations.php");
             }
         });
     });

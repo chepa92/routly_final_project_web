@@ -11,7 +11,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
 <html lang="en">
 
 <head>
-    <title>Home</title>
+    <title>Routly</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -38,7 +38,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
             <img id="user-logo" src="images/pass1.png" width="60" alt="">
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light navbar-second navhover">
-            <span class="navbar-toggler navbar-text-current">Station List</span>
+            <span class="navbar-toggler navbar-text-current">My Trips</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -84,20 +84,15 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Passenger')
 
     <main>
         <div class="form-row">
-            <div class="col-6">
+            <div class="col-4">
                 <input type="text" id="table-search" class="form-control form-control-lg d-none d-sm-block d-sm-none" placeholder="Search">
             </div>
-            <div class="col-2">
-                <select class="form-control form-control-lg" name="District" id="District">
-                    <option value="all">All Districts</option>
-                </select>
-            </div>
-            <div class="col-2">
+            <div class="col-4">
                 <select class="form-control form-control-lg" name="City" id="City">
                     <option value="all">All Cities</option>
                 </select>
             </div>
-            <div class="col-2">
+            <div class="col-4">
                 <a href="" class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#createTrip">New Order</a>
             </div>
         </div>

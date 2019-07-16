@@ -1,39 +1,25 @@
 <?php
 include 'db.php';
- 
-if(isset($_REQUEST["term"])){
-    // Prepare a select statement
-    $sql = "SELECT * FROM tb_stations_201 WHERE name LIKE ?";
-    
-    if($stmt = mysqli_prepare($connection, $sql)){
-        // Bind variables to the prepared statement as parameters
-        mysqli_stmt_bind_param($stmt, "s", $param_term);
-        
-        // Set parameters
-        $param_term = $_REQUEST["term"] . '%';
-        
-        // Attempt to execute the prepared statement
-        if(mysqli_stmt_execute($stmt)){
-            $result = mysqli_stmt_get_result($stmt);
-            
-            // Check number of rows in the result set
-            if(mysqli_num_rows($result) > 0){
-                // Fetch result rows as an associative array
-                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                    echo "<p>" . $row["name"] . " ". $row["id"] . "</p>";
-                }
-            } else{
-                echo "<p>No matches found</p>";
-            }
-        } else{
-            echo "ERROR: Could not able to execute $sql. " . mysqli_error($connection);
-        }
-    }
-     
-    // Close statement
-    mysqli_stmt_close($stmt);
-}
- 
-// close connection
-mysqli_close($connection);
+
+
+if(isset($_REQUEST['term'])) {
+
+    $query = "SELECT * FROM tb_stations_201 WHERE name LIKE ?";
+    $statement = $connection->prepare($query);
+    $term = "%".$_REQUEST['term']."%";
+    $statement->bind_param("s", $term);
+    $statement->execute();
+    $statement->store_result();
+    if($statement->num_rows() == 0) {
+        echo "<p>Nothing found by search ".$_REQUEST['term']."</p>";
+        $statement->close();
+        $connection->close();
+    } else {
+        $statement->bind_result($id,$name,$district,$city,$street,$latitude,$longitude,$comment,$map,$light,$conditioner,$wifi);
+        while ($statement->fetch()) {
+            echo "<p>" . $name . " ". $id . "</p>";
+        };
+        $statement->close();
+        $connection->close();
+    };};
 ?>

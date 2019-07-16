@@ -11,7 +11,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
 <html lang="en">
 
 <head>
-    <title>Home</title>
+    <title>Routly</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -129,7 +129,7 @@ if (!isset($_SESSION["userid"]) || $_SESSION["role"] != 'Admin')
                                       <td>" . $row["city"] . "</td>
                                       <td>" . $row["street"] . "</td>
                                       <td>" . $row["comment"] . "</td>
-                                      <td><a href='/admin_station_info.php?stationID=" . $row["id"] . "'>Info</a></td>
+                                      <td><a href='./admin_station_info.php?stationID=" . $row["id"] . "'>Info</a></td>
                                   </tr>";
                         }
                     }
